@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap android:src="@drawable/wall3"
+            android:gravity="center"/>
+    </item>
+   <item android:width="100dp"
+         android:height="100dp">
+       <bitmap android:src="@drawable/cam"
+           android:gravity="center"
+           />
+   </item>
+    <item
+        android:height="50dp"
+        android:width="50dp"
+        android:left="100dp"
+        android:top="400dp">
+        <bitmap android:src="@drawable/dau"
+            android:gravity="center"/>
+    </item>
+</layer-list>

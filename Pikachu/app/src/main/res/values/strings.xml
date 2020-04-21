@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Pikachu</string>
+    <string-array name="List_icon">
+        <item>icon1</item>
+        <item>icon2</item>
+        <item>icon3</item>
+        <item>icon4</item>
+        <item>icon5</item>
+        <item>icon6</item>
+        <item>icon7</item>
+        <item>icon8</item>
+        <item>icon9</item>
+        <item>icon10</item>
+        <item>icon11</item>
+        <item>icon12</item>
+        <item>icon13</item>
+        <item>icon14</item>
+        <item>icon15</item>
+        <item>icon16</item>
+        <item>icon17</item>
+        <item>icon18</item>
+        <item>icon19</item>
+        <item>icon20</item>
+        <item>icon21</item>
+        <item>icon22</item>
+        <item>icon23</item>
+        <item>icon24</item>
+        <item>icon25</item>
+        <item>icon26</item>
+        <item>icon27</item>
+        <item>icon28</item>
+        <item>icon29</item>
+        <item>icon30</item>
+        <item>icon31</item>
+        <item>icon32</item>
+        <item>icon33</item>
+        <item>icon34</item>
+        <item>icon35</item>
+        <item>icon36</item>
+
+    </string-array>
+</resources>

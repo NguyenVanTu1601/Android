@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BT_App_Toan_Cau</string>
+    <string name="email">Địa chỉ email</string>
+    <string name="name">Họ và tên</string>
+    <string name="phieu_thong_tin">Phiếu thông tin</string>
+    <string name="phone_number">Số điện thoại</string>
+    <string name="xac_nhan">Xác nhận</string>
+    <string name="txt_Xinchao">Xin chào</string>
+</resources>

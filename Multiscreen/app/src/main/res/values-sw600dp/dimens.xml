@@ -1,0 +1,152 @@
+<resources>
+  <dimen name="dp2">
+    3.3dp
+  </dimen>
+  <dimen name="dp4">
+    6.7dp
+  </dimen>
+  <dimen name="dp6">
+    10.0dp
+  </dimen>
+  <dimen name="dp8">
+    13.3dp
+  </dimen>
+  <dimen name="dp10">
+    16.7dp
+  </dimen>
+  <dimen name="dp12">
+    20.0dp
+  </dimen>
+  <dimen name="dp14">
+    23.3dp
+  </dimen>
+  <dimen name="dp16">
+    26.7dp
+  </dimen>
+  <dimen name="dp18">
+    30.0dp
+  </dimen>
+  <dimen name="dp20">
+    33.3dp
+  </dimen>
+  <dimen name="dp22">
+    36.7dp
+  </dimen>
+  <dimen name="dp24">
+    40.0dp
+  </dimen>
+  <dimen name="dp26">
+    43.3dp
+  </dimen>
+  <dimen name="dp28">
+    46.7dp
+  </dimen>
+  <dimen name="dp30">
+    50.0dp
+  </dimen>
+  <dimen name="dp32">
+    53.3dp
+  </dimen>
+  <dimen name="dp34">
+    56.7dp
+  </dimen>
+  <dimen name="dp36">
+    60.0dp
+  </dimen>
+  <dimen name="dp38">
+    63.3dp
+  </dimen>
+  <dimen name="dp40">
+    66.7dp
+  </dimen>
+  <dimen name="dp42">
+    70.0dp
+  </dimen>
+  <dimen name="dp44">
+    73.3dp
+  </dimen>
+  <dimen name="dp46">
+    76.7dp
+  </dimen>
+  <dimen name="dp48">
+    80.0dp
+  </dimen>
+  <dimen name="dp50">
+    83.3dp
+  </dimen>
+  <dimen name="dp52">
+    86.7dp
+  </dimen>
+  <dimen name="dp54">
+    90.0dp
+  </dimen>
+  <dimen name="dp56">
+    93.3dp
+  </dimen>
+  <dimen name="dp58">
+    96.7dp
+  </dimen>
+  <dimen name="dp60">
+    100.0dp
+  </dimen>
+  <dimen name="dp62">
+    103.3dp
+  </dimen>
+  <dimen name="dp64">
+    106.7dp
+  </dimen>
+  <dimen name="dp66">
+    110.0dp
+  </dimen>
+  <dimen name="dp68">
+    113.3dp
+  </dimen>
+  <dimen name="dp70">
+    116.7dp
+  </dimen>
+  <dimen name="dp72">
+    120.0dp
+  </dimen>
+  <dimen name="dp74">
+    123.3dp
+  </dimen>
+  <dimen name="dp76">
+    126.7dp
+  </dimen>
+  <dimen name="dp78">
+    130.0dp
+  </dimen>
+  <dimen name="dp80">
+    133.3dp
+  </dimen>
+  <dimen name="dp82">
+    136.7dp
+  </dimen>
+  <dimen name="dp84">
+    140.0dp
+  </dimen>
+  <dimen name="dp86">
+    143.3dp
+  </dimen>
+  <dimen name="dp88">
+    146.7dp
+  </dimen>
+  <dimen name="dp90">
+    150.0dp
+  </dimen>
+  <dimen name="dp92">
+    153.3dp
+  </dimen>
+  <dimen name="dp94">
+    156.7dp
+  </dimen>
+  <dimen name="dp96">
+    160.0dp
+  </dimen>
+  <dimen name="dp98">
+    163.3dp
+  </dimen>
+  <dimen name="dp100">
+    166.7dp
+  </dimen>
+</resources>

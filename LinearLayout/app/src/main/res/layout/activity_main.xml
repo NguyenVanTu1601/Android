@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:weightSum="10"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<TextView-->
+        <!--android:layout_weight="2"-->
+        <!--android:background="#CDDC39"-->
+        <!--android:textColor="#03A9F4"-->
+        <!--android:textSize="30sp"-->
+        <!--android:text="Hello Tu!"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp" />-->
+    <LinearLayout
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:gravity="center"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Hi Tu!"
+            android:textColor="#ff0"
+            android:textSize="30sp"
+            android:background="#11FF00"
+            />
+        <TextView
+            android:gravity="center"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Hello Tu!"
+            android:textColor="#ff0"
+            android:textSize="30sp"
+            android:background="#0066FF"
+            />
+    </LinearLayout>
+    <!--<TextView-->
+        <!--android:layout_weight="3"-->
+        <!--android:background="#00BCD4"-->
+        <!--android:textColor="#E91E3C"-->
+        <!--android:textSize="30sp"-->
+        <!--android:text="Hello Tung!"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp" />-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="9"
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:gravity="center"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="30sp"
+            android:textColor="#FF0077"
+            android:background="#ff0"
+            android:text="Hi Tung"/>
+        <TextView
+            android:gravity="center"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="30sp"
+            android:textColor="#FF0077"
+            android:background="#00FF99"
+            android:text="Hello Tung"/>
+        <TextView
+            android:gravity="center"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="30sp"
+            android:textColor="#FF0077"
+            android:background="#9DFF00"
+            android:text="Chao Tung"/>
+    </LinearLayout>
+    <!--<TextView-->
+        <!--android:layout_weight="5"-->
+        <!--android:background="#CDDC39"-->
+        <!--android:textColor="#03A9F4"-->
+        <!--android:textSize="30sp"-->
+        <!--android:text="Hello Trung!"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp" />-->
+    <LinearLayout
+        android:weightSum="7"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="Hello Trung"
+            android:textColor="#FF0000"
+            android:textSize="30sp"
+            android:background="#00BCD4"
+            />
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="Chao Trung"
+            android:textColor="#D000FF"
+            android:textSize="30sp"
+            android:background="#FF9800"
+            />
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:text="Hi Trung"
+            android:textColor="#FF0000"
+            android:textSize="30sp"
+            android:background="#FFFF00"
+            />
+    </LinearLayout>
+
+</LinearLayout>

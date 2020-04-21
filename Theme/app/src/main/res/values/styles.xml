@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light"> // Actionbar màu đen
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#00FF55</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">#00FFD9</item>
+        <item name="android:windowBackground">#2DA529</item>
+    </style>
+
+    //Style dành cho Textview
+    <style name="InfomationTextView">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+</resources>

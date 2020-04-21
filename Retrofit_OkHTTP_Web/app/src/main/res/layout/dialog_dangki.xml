@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_ground_signup">
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng kí tài khoản"
+        android:textSize="30sp"
+        android:textColor="#0055FF"
+        android:gravity="center"/>
+    <ImageView
+        android:layout_marginTop="15dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/imageview"/>
+    <EditText
+        android:id="@+id/editextUser"
+        android:textColorHint="#00FFA6"
+        android:textColor="#00FFA6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:hint="Tên tài khoản" />
+
+    <EditText
+        android:id="@+id/editextPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:hint="Mật khẩu"
+        android:textColorHint="#00FFA6"
+        android:textColor="#00FFA6"/>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="2dp">
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="Hủy"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/buttonHuyDangki"
+            android:background="@drawable/custom_button"/>
+        <Button
+            android:id="@+id/buttonSignUp"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="Đăng kí"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/custom_button"/>
+    </LinearLayout>
+</LinearLayout>

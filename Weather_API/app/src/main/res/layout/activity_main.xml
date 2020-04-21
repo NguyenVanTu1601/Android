@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="@drawable/images">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textColorHint="#00FF99"
+            android:hint="Nhập tên địa điểm"
+            android:textColor="#00FF99"/>
+        <Button
+            android:layout_marginTop="5dp"
+            android:id="@+id/buttonSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:text="OK"/>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10sp"
+        android:orientation="vertical">
+        <TextView
+            android:textColor="#00FF99"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Thành phố : "
+            android:id="@+id/textViewCity"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:textColor="#00FF99"
+            android:layout_marginTop="10dp"
+            android:id="@+id/Quocgia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Quốc gia : "
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ImageViewWeather"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:textColor="#00FF99"
+        android:id="@+id/textViewWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thời tiết"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="10dp">
+        <ImageView
+            android:textColor="#00FF99"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/rain_drop"/>
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="50dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/cloud"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="50dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/wind" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="10dp">
+        <TextView
+            android:textColor="#00FF99"
+            android:id="@+id/textViewRaindrop"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:text="50%"
+            android:textSize="20sp"
+            android:gravity="center"/>
+        <TextView
+            android:textColor="#00FF99"
+            android:id="@+id/textViewCloud"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:text="50%"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginLeft="50dp"/>
+        <TextView
+            android:textColor="#00FF99"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="50%"
+            android:id="@+id/textViewWind"
+            android:textSize="20sp"
+            android:layout_marginLeft="50dp"
+        android:gravity="center"/>
+    </LinearLayout>
+    <TextView
+        android:gravity="center"
+        android:textColor="#00FF99"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thời gian : "
+        android:id="@+id/textViewDay"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/buttonChange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:text="Các ngày tiếp theo" />
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Từ mới"
+            android:id="@+id/line_vocabulary"
+            android:textSize="25sp"
+            android:textColor="#00FF7B"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/line_volumn"
+            android:src="@drawable/ic_volume"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nghĩa của từ"
+        android:textSize="20sp"
+        android:layout_marginLeft="5dp"
+        android:textColor="#00FFAE"
+        android:id="@+id/line_mean"/>
+</LinearLayout>

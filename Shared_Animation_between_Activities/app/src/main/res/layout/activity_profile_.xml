@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile_Activity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:transitionName="imageTransition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/profile_image"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"/>
+    <TextView
+        android:transitionName="nameTransition"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Girl Internet"
+        android:textSize="30sp"
+        android:textColor="#0073FF"
+        android:textStyle="bold"/>
+    <TextView
+        android:transitionName="descTransition"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/info"
+        android:lineSpacingMultiplier="1.5"
+        android:textSize="15sp"
+        android:textColor="#00FF7B"/>
+
+    <ImageView
+        android:layout_width="321dp"
+        android:layout_height="43dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/follow"
+        android:layout_marginTop="40dp"/>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SelectImage</string>
+    <string-array name="list_name">
+        <item>icon1</item>
+        <item>icon2</item>
+        <item>icon3</item>
+        <item>icon4</item>
+        <item>icon5</item>
+        <item>icon6</item>
+        <item>icon7</item>
+        <item>icon8</item>
+        <item>icon9</item>
+        <item>icon10</item>
+        <item>icon11</item>
+        <item>icon12</item>
+        <item>icon13</item>
+        <item>icon14</item>
+        <item>icon15</item>
+    </string-array>
+</resources>

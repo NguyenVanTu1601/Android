@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BT_App_Toan_Cau</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone number</string>
+    <string name="xac_nhan">Confirm</string>
+    <string name="phieu_thong_tin">Information Form</string>
+    <string name="email">Email Address</string>
+    <string name="txt_Xinchao">Hello</string>
+
+</resources>

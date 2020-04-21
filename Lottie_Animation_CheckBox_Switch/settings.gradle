@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Lottie_Animation_CheckBox_Switch'

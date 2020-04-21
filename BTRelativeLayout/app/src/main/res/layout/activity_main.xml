@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng Nhập"
+        android:textSize="40sp"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="200dp"
+        android:id="@+id/dtextview1"
+        />
+    <EditText
+        android:id="@+id/edittext1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:textSize="30sp"
+        android:layout_below="@id/dtextview1"
+        android:layout_marginTop="10dp"/>      <!--cách cạnh trên 10 dp-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textSize="30sp"
+        android:layout_below="@id/edittext1"
+        android:id="@+id/edittext2"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quên MK"
+        android:textSize="25sp"
+        android:layout_below="@id/edittext2"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/but1"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="38dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/but1"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/edittext2"
+        android:layout_marginTop="20dp"
+        android:text="Đăng nhập"
+        android:textSize="25sp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext2"
+        android:layout_toRightOf="@+id/but1"
+        android:layout_marginTop="20dp"
+
+        android:text="Trợ giúp"
+        android:textSize="25sp"
+
+        />
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Information_Activity"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/infor_image"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên tài khoản"
+        android:textSize="20sp"
+        android:id="@+id/infor_taikhoan"
+        android:layout_marginLeft="20dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mật khẩu"
+        android:textSize="20sp"
+        android:id="@+id/infor_matkhau"
+        android:layout_margin="20dp"
+        />
+    <Button
+        android:id="@+id/button_xoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xóa tài khoản"
+        android:background="@drawable/custom_button"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

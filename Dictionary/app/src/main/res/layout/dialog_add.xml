@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Thêm từ mới"
+        android:textColor="#00CCFF"
+        android:textSize="30sp"
+        android:gravity="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập từ mới"
+        android:textSize="25sp"
+        android:layout_margin="10dp"
+        android:id="@+id/dialog_addTu"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập nghĩa của từ"
+        android:textSize="25sp"
+        android:layout_margin="10dp"
+        android:id="@+id/dialog_addNghia"/>
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Hủy"
+            android:id="@+id/dialog_huy"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Thêm"
+            android:id="@+id/dialog_them"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+</LinearLayout>

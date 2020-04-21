@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Gesture_Keo_View'

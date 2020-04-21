@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:weightSum="10"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#ff0"
+            android:gravity="center"
+            android:text="Hihi"
+            android:textColor="#ff00"
+            android:textSize="30sp"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="7"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Hi Tung"
+            android:textColor="#0040FF"
+            android:background="#FFA200"
+            android:textSize="30sp"
+            android:gravity="center" />
+        <LinearLayout
+            android:weightSum="10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:background="#00FF7B"
+                android:gravity="center"
+                android:text="Hi Trung"
+                android:textColor="#FF0000"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#6FFF3B"
+                    android:gravity="center"
+                    android:text="Hello Tung"
+                    android:textColor="#673AB7"
+                    android:textSize="30sp" />
+                <TextView
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Hello Trung"
+                    android:textColor="#FF6600"
+                    android:textSize="30sp"
+                    android:background="#00BCD4"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

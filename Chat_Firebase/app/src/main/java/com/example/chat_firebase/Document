@@ -1,0 +1,64 @@
+Thứ tự thực hiện trong project
+1. Tạo project kết nối Firebase
+2. Tạo ViewPager, Tab, 3 Fragment trong MainActivity
+3. Tạo Activity Login, Register và kết nối tới FireBase Auth
+4. Tạo menu setting, logout
+5. Kết nối database thêm thông tin user lên đó thông qua uID của người đăng nhập và form Setting
+6. Chức năng lấy thông tin ng dùng về RetrieveUserInfo trong SettingActivity
+7. Tạo group chat trong MainActivity : RequestNewGroup
+8. Đọc group về : RetrieveDataOnlistView
+9. Gửi tin nhắn lên group chat và nhận tin nhắn về trong class groupChatActivity + sự kiện tự scroll
+11. Chức năng đăng nhập bằng sđt
+   + Lần đầu là gửi code về
+   + Lần sau sẽ sử dụng code để login
+12. Chọn ảnh từ máy và 1 số tính năng về ảnh
+   + Thêm thư viện và thêm trong menifes theo hướng dẫn
+   https://github.com/ArthurHub/Android-Image-Cropper
+13. Up ảnh và nhận ảnh từ firebase
+14. Tạo Activity findFriends và sửa 1 tí trong Manifes phần ActivityFindFriends
+    Thêm thư viện firebaseUI database : https://github.com/firebase/FirebaseUI-Android
+    Sử dụng RelativeLayout
+15. Sự kiện click vào 1 user hiện thông tin và gửi yêu cầu chat trong profileActivity
+    + Kiểm tra đã gửi yêu cầu chưa, chưa thì tạo nhánh cây mới cho cả bên gửi và bên nhận : nhánh cây yêu cầu Chat Request
+    Bên gửi có values = sent
+    Bên nhận có values = recieved
+    + Xóa nhánh cây nếu bỏ yêu cầu chat
+
+    => Thao tác chính của phần này : Khi click vào 1 user có 1 số hiện trạng sau
+    - Nếu chưa gửi kb tới ng đó thì xử lý ntn -> click để gửi
+    - Nếu ng đó gửi kb tới r mà từ chỗi thì xử lý như nào -> hủy hết các nhánh cây đã tạo
+    - Nếu ng đó gửi tới mà chấp nhận thì như nào
+      + Tạo ra một cây mới là cây liên hệ giữa 2 người : nhánh cây Contacts
+      + Xóa yêu cầu ChatRequest từ cả 2 phía nhận và gửi
+      + Cập nhật trạng thái currenStatus thành friends
+      + Đổi nút thành remove contact để có thể xóa kết bạn
+      + xử lý khi đọc dữ liệu là friend và muốn hủy kết bạn khi nhấn nút
+
+    Xử lý thông qua các 2 button đã có
+
+    - Layout dùng để custom là user_display_layout... Chứa các thông tin cơ bản về 2 nút Accept, Cancel để chấp nhận hoặc
+    không chấp nhận yêu cầu thêm bạn, tuy nhiên 2 nút này chỉ hiện khi mở từ requestFragment còn bình thường nó bị INVISIBLE
+
+
+16. Hiển thị danh sách các Contacts : Tức là các danh sách yêu cầu kết bạn
+    Tương tự phần findFriends sử dụng RecyclerView và FirebaseUIDatabase
+
+17. Tạo fragment : RequestFragment và thêm vào tablayout
+    Sử dụng như findFriends và Contacts thêm danh sách yêu cầu vào RecyclerView
+    Tuy nhiên trong lần lấy dữ liệu này cần ktra
+    + Nếu received_type = sent tức là đang gửi đi -> thông tin nay ko lấy
+    + Nếu received_type = received tức là nhận được lời kb. Cái này mới lấy
+    LayoutCustom sử dụng :  users_display_layout
+
+    Xử lý sự kiện với 2 button
+    + Nếu accept :
+
+    DatabaseUI của firebase truy cập nhánh, nếu có dữ liệu nó sẽ đọc luôn ra nên chưa biết cách sửa trong phần này
+    Thay vào đó sẽ sử dụng ListView thông thường và đọc dữ liệu :))
+
+
+Error : 1.Lỗi phát sinh : Nếu ng dùng chưa đặt avata thì lúc findFriend sẽ hiện cả người dùng có nút send
+        2.Mỗi khi bật lại group chat hau reuqest vd như tạm tắt màn hình nó sẽ tự nhân đôi các tin nhắn
+ -> Do mỗi lần vào onStart nó sự tự khởi động và nhận thay đổi về. Tuy nhiên nó chỉ lỗi khi đọc addChild ... có thể do chưa hiểu
+ hết các sử dụng
+ => Chuyển nó vào onCreate để tạo 1 lần lúc khởi động thôi => Đã sửa

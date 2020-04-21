@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="10">
+
+    <fragment
+        android:id="@+id/fragment_list"
+        android:name="com.example.fragment_bt_xu_ly_giao_dien.Fragment_student_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4" />
+
+    <fragment
+        android:id="@+id/fragment_info"
+        android:name="com.example.fragment_bt_xu_ly_giao_dien.Fragment_student_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="6" />
+</LinearLayout>

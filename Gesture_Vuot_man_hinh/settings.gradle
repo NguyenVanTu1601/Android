@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Gesture_Vuot_man_hinh'

@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Innet_Explicit_Truyen_nhan_doituong'

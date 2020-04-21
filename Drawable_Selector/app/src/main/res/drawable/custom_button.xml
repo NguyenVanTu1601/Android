@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@color/colorAccent"
+        android:state_pressed="true"> // bắt sự kiện chạm vào + màu mới nhận được
+    </item>
+    <item
+        android:state_pressed="false"
+        android:drawable="@color/colorPrimary"/> // đánh dấu màu ban đầu
+</selector>

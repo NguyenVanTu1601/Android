@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id = "@android:id/background">  // id dùng phân biệt nó là background và id này là mặc định của android
+        <shape android:shape="rectangle">
+            <solid android:color="#00FF88"/>
+            <corners android:radius="40dp"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip> // cặp thẻ clip dùng để cắt phần thừa , hiển thị đúng phần còn lại theo yêu cầu. Tức là progess cho hiện 30 thì cắt đi 70 để còn 30
+            <shape android:shape="rectangle">
+                <solid android:color="#E9D900FF"/>
+                <corners android:radius="35dp"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

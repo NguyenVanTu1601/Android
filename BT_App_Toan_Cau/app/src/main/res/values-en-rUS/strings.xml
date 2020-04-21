@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BT_App_Toan_Cau</string>
+    <string name="email">Email address</string>
+    <string name="name">Name</string>
+    <string name="phieu_thong_tin">Information Form</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="xac_nhan">Confirm</string>
+    <string name="txt_Xinchao">Hello</string>
+</resources>

@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Intent_Explicit_Truyen_nhan_Bundle'

@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Load_Image_From_Internet_with_Async'

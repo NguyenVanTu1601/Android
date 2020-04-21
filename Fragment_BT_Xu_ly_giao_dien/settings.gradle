@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Fragment_BT_Xu_ly_giao_dien'

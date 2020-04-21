@@ -1,0 +1,208 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// Code hỗ trợ đa màn hình.
+task convertDimens() {
+    def xmlRoot = "${project.rootDir}/app/src/main/res/values"
+    def xmlDimenFileName = "dimens.xml"
+    def xmlFileDefault = xmlRoot + "/" + xmlDimenFileName
+    def xmlFile360 = xmlRoot + "-sw360dp/" + xmlDimenFileName
+    def xmlFile480 = xmlRoot + "-sw480dp/" + xmlDimenFileName
+    def xmlFile540 = xmlRoot + "-sw540dp/" + xmlDimenFileName
+    def xmlFile600 = xmlRoot + "-sw600dp/" + xmlDimenFileName
+    def xmlFile640 = xmlRoot + "-sw640dp/" + xmlDimenFileName
+    def xmlFile720 = xmlRoot + "-sw720dp/" + xmlDimenFileName
+    def xmlFile800 = xmlRoot + "-sw800dp/" + xmlDimenFileName
+
+    makeFolder(xmlFile360, xmlFile480, xmlFile540, xmlFile600, xmlFile640, xmlFile720, xmlFile800)
+
+    createOrCloneDefaultData(xmlFileDefault, xmlFile360)
+
+    def xmlOriginal = new XmlParser().parse(xmlFile360)
+
+    def xml480 = xmlOriginal.clone()
+    def xml540 = xmlOriginal.clone()
+    def xml600 = xmlOriginal.clone()
+    def xml640 = xmlOriginal.clone()
+    def xml720 = xmlOriginal.clone()
+    def xml800 = xmlOriginal.clone()
+
+    xml480.dimen.each { dimen ->
+        def value = dimen.text()
+        if (isSkipCheck(value)) {
+            //skip
+        } else if (value.contains("px")) {
+            def newValue = value.replace("px", "").toFloat()
+            newValue = round((480 / 360 * newValue).toFloat(), 1)
+            dimen.value = newValue + "px"
+        } else {
+            def newValue = value.replace("dp", "").toFloat()
+            newValue = round((480 / 360 * newValue).toFloat(), 1)
+            dimen.value = newValue + "dp"
+        }
+    }
+
+    xml540.dimen.each { dimen ->
+        def value = dimen.text()
+        if (isSkipCheck(value)) {
+            //skip
+        } else if (value.contains("px")) {
+            def newValue = value.replace("px", "").toFloat()
+            newValue = round((540 / 360 * newValue).toFloat(), 1)
+            dimen.value = newValue + "px"
+        } else {
+            def newValue = value.replace("dp", "").toFloat()
+            newValue = round((540 / 360 * newValue).toFloat(), 1)
+            dimen.value = newValue + "dp"
+        }
+    }
+    xml600.dimen.each { dimen ->
+        def value = dimen.text()
+        if (isSkipCheck(value)) {
+            //skip
+        } else if (value.contains("px")) {
+            def newValue = value.replace("px", "").toFloat()
+            newValue = round((600 / 360 * newValue).toFloat(), 1)
+            dimen.value = newValue + "px"
+        } else {
+            def newValue = value.replace("dp", "").toFloat()
+            newValue = round((600 / 360 * newValue).toFloat(), 1)
+            dimen.value = newValue + "dp"
+        }
+    }
+    xml640.dimen.each { dimen ->
+        def value = dimen.text()
+        if (isSkipCheck(value)) {
+            //skip
+        } else if (value.contains("px")) {
+            def newValue = value.replace("px", "").toFloat()
+            newValue = round((640 / 360 * newValue).toFloat(), 1)
+            dimen.value = newValue + "px"
+        } else {
+            def newValue = value.replace("dp", "").toFloat()
+            newValue = round((640 / 360 * newValue).toFloat(), 1)
+            dimen.value = newValue + "dp"
+        }
+    }
+    xml720.dimen.each { dimen ->
+        def value = dimen.text()
+        if (isSkipCheck(value)) {
+            //skip
+        } else if (value.contains("px")) {
+            def newValue = value.replace("px", "").toFloat()
+            newValue = round((720 / 360 * newValue).toFloat(), 1)
+            dimen.value = newValue + "px"
+        } else {
+            def newValue = value.replace("dp", "").toFloat()
+            newValue = round((720 / 360 * newValue).toFloat(), 1)
+            dimen.value = newValue + "dp"
+        }
+    }
+    xml800.dimen.each { dimen ->
+        def value = dimen.text()
+        if (isSkipCheck(value)) {
+            //skip
+        } else if (value.contains("px")) {
+            def newValue = value.replace("px", "").toFloat()
+            newValue = round((800 / 360 * newValue).toFloat(), 1)
+            dimen.value = newValue + "px"
+        } else {
+            def newValue = value.replace("dp", "").toFloat()
+            newValue = round((800 / 360 * newValue).toFloat(), 1)
+            dimen.value = newValue + "dp"
+        }
+    }
+
+    new XmlNodePrinter(new PrintWriter(new FileWriter(xmlFile480))).print(xml480)
+    new XmlNodePrinter(new PrintWriter(new FileWriter(xmlFile540))).print(xml540)
+    new XmlNodePrinter(new PrintWriter(new FileWriter(xmlFile600))).print(xml600)
+    new XmlNodePrinter(new PrintWriter(new FileWriter(xmlFile640))).print(xml640)
+    new XmlNodePrinter(new PrintWriter(new FileWriter(xmlFile720))).print(xml720)
+    new XmlNodePrinter(new PrintWriter(new FileWriter(xmlFile800))).print(xml800)
+}
+
+private static boolean isSkipCheck(String value) {
+    return value.contains("sp") || value.contains("@dimen/")
+}
+
+private static void createOrCloneDefaultData(String xmlFileDefault, String xmlFile360) {
+    def fileDefault = new File(xmlFileDefault)
+    if (!fileDefault.exists()) {
+        fileDefault.createNewFile()
+        StringBuilder content = new StringBuilder("<resources>\n")
+        for (int i = 2; i <= 100; i += 2) {
+            content.append("\t<dimen name=\"dp" + i + "\">" + i + "dp</dimen>\n")
+        }
+        content.append("</resources>")
+        BufferedWriter bw = new BufferedWriter(new FileWriter(xmlFileDefault))
+        bw.write(content.toString())
+        bw.close()
+    }
+
+    def file360 = new File(xmlFile360)
+    if (fileDefault.exists()) {
+        copyFileUsingStream(fileDefault, file360)
+    }
+}
+
+static float round(float d, int decimalPlace) {
+    BigDecimal bd = new BigDecimal(Float.toString(d))
+    bd = bd.setScale(decimalPlace, BigDecimal.ROUND_HALF_UP)
+    return bd.floatValue()
+}
+
+static void makeFolder(String... paths) {
+    for (int i = 0; i < paths.length; i++) {
+        def folder = new File(new File(paths[i]).getParent())
+        if (!folder.exists()) {
+            folder.mkdirs()
+        }
+    }
+}
+
+static void copyFileUsingStream(File source, File dest) throws IOException {
+    InputStream is = null
+    OutputStream os = null
+    try {
+        is = new FileInputStream(source)
+        os = new FileOutputStream(dest)
+        byte[] buffer = new byte[1024]
+        int length
+        while ((length = is.read(buffer)) > 0) {
+            os.write(buffer, 0, length)
+        }
+    } finally {
+        if (is != null) {
+            is.close()
+        }
+        if (os != null) {
+            os.close()
+        }
+    }
+}
+clean.dependsOn convertDimens

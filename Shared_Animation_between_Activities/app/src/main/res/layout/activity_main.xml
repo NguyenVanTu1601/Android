@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@mipmap/background">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/logo_icon"
+        android:layout_marginTop="50dp"
+        android:id="@+id/image_logo"/>
+    <LinearLayout
+        android:id="@+id/LinearLayout_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/card_main"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/profile_image"
+            android:id="@+id/profile_image"
+            android:transitionName="imageTransition"/>
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Girl Internet"
+                android:textSize="30sp"
+                android:textColor="#0073FF"
+                android:textStyle="bold"
+                android:transitionName="nameTransition"/>
+            <TextView
+                android:id="@+id/profile_desc"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info"
+                android:lineSpacingMultiplier="1.5"
+                android:textSize="15sp"
+                android:transitionName="descTransition"
+                android:textColor="#00FF7B"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#5A5A55"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Click the cardview to view profile"/>
+</LinearLayout>
