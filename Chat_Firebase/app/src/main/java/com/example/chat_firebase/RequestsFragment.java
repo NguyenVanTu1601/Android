@@ -189,7 +189,7 @@ public class RequestsFragment extends Fragment {
                             }
 
                             // Nếu là mình gửi yêu cầu
-                            else{
+                            else if(type.equals("sent")){
                                 // Nếu gửi yêu cầu thì hiện button bảo hủy yêu cầu request
                                 UsersRef.child(list_user_id).addValueEventListener(new ValueEventListener() {
                                     @Override
@@ -202,15 +202,35 @@ public class RequestsFragment extends Fragment {
                                         }
                                         String  requestUserName = dataSnapshot.child("name").getValue().toString();
                                         String  requestUserStatus = "you can cancel chat request";
+
                                         holder.userName.setText(requestUserName);
                                         holder.userStatus.setText(requestUserStatus);
                                         holder.CancleButton.setVisibility(View.VISIBLE);
                                         holder.AcceptButton.setVisibility(View.INVISIBLE);
-                                        holder.CancleButton.setText("Send Request");
+                                        holder.CancleButton.setText("Cancel Request");
+
                                         holder.CancleButton.setOnClickListener(new View.OnClickListener() {
                                             @Override
                                             public void onClick(View v) {
-                                                Toast.makeText(getContext(), "hihi", Toast.LENGTH_SHORT).show();
+                                                ChatRequestRef.child(currentUserID).child(list_user_id)
+                                                        .removeValue()
+                                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                            @Override
+                                                            public void onComplete(@NonNull Task<Void> task) {
+                                                                if(task.isSuccessful()){
+                                                                    ChatRequestRef.child(list_user_id).child(currentUserID)
+                                                                            .removeValue()
+                                                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                                @Override
+                                                                                public void onComplete(@NonNull Task<Void> task) {
+                                                                                    if(task.isSuccessful()){
+                                                                                        Toast.makeText(getContext(), "Delete request!", Toast.LENGTH_SHORT).show();
+                                                                                    }
+                                                                                }
+                                                                            });
+                                                                }
+                                                            }
+                                                        });
                                             }
                                         });
                                     }

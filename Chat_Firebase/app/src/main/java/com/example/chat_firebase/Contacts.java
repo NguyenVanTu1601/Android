@@ -1,5 +1,8 @@
 package com.example.chat_firebase;
 
+/**
+ * Class này để đọc thông tin người dùng về
+ */
 public class Contacts {
     public String name,status, image;
     public Contacts(){}

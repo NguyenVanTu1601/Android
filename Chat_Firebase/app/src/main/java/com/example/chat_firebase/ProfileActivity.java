@@ -19,6 +19,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.util.HashMap;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -34,6 +36,7 @@ public class ProfileActivity extends AppCompatActivity {
     private DatabaseReference chatRequestRef; // Dùng tạo nhánh mới chứa vấn đề về gửi nhận yêu cầu chat
     private FirebaseAuth mAuth;               // Lấy id bản thân
     private DatabaseReference ContactsRef;    // Nhánh mới chứa vấn đề nội dung chat cá nhân
+    private DatabaseReference NotificationRef; // Chứa các notifi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -207,6 +210,7 @@ public class ProfileActivity extends AppCompatActivity {
                 });
     }
 
+    // Chấp nhận kết bạn
     private void AcceptChatRequest() {
         ContactsRef.child(senderUserID).child(receiverUserID)
                 .child("Contacts").setValue("Saved").addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -290,9 +294,25 @@ public class ProfileActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if(task.isSuccessful()){
-                                    SendMessageRequestButton.setEnabled(true);
-                                    currentStatus = "request_sent";
-                                    SendMessageRequestButton.setText("Cancel chat request");
+
+                                    // Tạo notification
+                                    HashMap<String, String> chatNotificationMap = new HashMap<>();
+                                    chatNotificationMap.put("from", senderUserID);
+                                    chatNotificationMap.put("type","request");
+                                    // Tạo nhánh cây có key random
+                                    NotificationRef.child(receiverUserID).push().setValue(chatNotificationMap)
+                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if(task.isSuccessful()){
+
+                                                // Hiển thị lại nút bấm và trạng thái để hoạt động nút bấm
+                                                SendMessageRequestButton.setEnabled(true);
+                                                currentStatus = "request_sent";
+                                                SendMessageRequestButton.setText("Cancel chat request");
+                                            }
+                                        }
+                                    });
                                 }
                             }
                         });
@@ -313,6 +333,7 @@ public class ProfileActivity extends AppCompatActivity {
         senderUserID = mAuth.getCurrentUser().getUid();
         chatRequestRef = FirebaseDatabase.getInstance().getReference().child("Chat Requests"); // tạo nhánh mới của database
         ContactsRef = FirebaseDatabase.getInstance().getReference().child("Contacts");
+        NotificationRef = FirebaseDatabase.getInstance().getReference().child("Notifications");
     }
 
 

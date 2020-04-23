@@ -21,6 +21,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 public class RegisterActivity extends AppCompatActivity {
     private Button RegisterButton;
@@ -98,7 +99,11 @@ public class RegisterActivity extends AppCompatActivity {
 
                                     // Tạo nhánh database có tên trùng ID user
                                     String currenUserId = mAuth.getCurrentUser().getUid();
-                                    RootRef.child("Users").child(currenUserId).setValue("");
+                                    RootRef.child("Users").child(currenUserId).setValue(""); // tạo nhánh rỗng do chưa có thông tin ng dùng
+
+                                    // Thêm 1 nhánh values nhỏ chứa token .. đoạn này dùng trong mục 19 cơ
+                                    String deviceToken = FirebaseInstanceId.getInstance().getToken();
+                                    RootRef.child("Users").child(currenUserId).child("device_token").setValue(deviceToken);
 
                                     // Quay về màn hình Main
                                     SendUserToMainActivity();

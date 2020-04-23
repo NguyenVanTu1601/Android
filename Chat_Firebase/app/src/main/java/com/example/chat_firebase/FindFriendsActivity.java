@@ -26,6 +26,9 @@ import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+/**
+ * Chứa danh sách người có thể liên hệ
+ */
 public class FindFriendsActivity extends AppCompatActivity {
     private Toolbar mToolBar;
     private RecyclerView FindFriendsRecycleList;

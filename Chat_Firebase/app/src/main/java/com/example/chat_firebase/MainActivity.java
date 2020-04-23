@@ -27,6 +27,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.HashMap;
+
 public class MainActivity extends AppCompatActivity {
     private Toolbar myToolbar;
     private ViewPager myViewPager;
@@ -35,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseUser currenUser;
     private FirebaseAuth mAuth;
     private DatabaseReference RootRef;
+    private String currentUserID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,7 +76,29 @@ public class MainActivity extends AppCompatActivity {
         if (currenUser == null){
             SentUserToLoginActivity();
         }else{
+            UpdateUserStatus("online");
             VeriFyUserExistance();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mAuth = FirebaseAuth.getInstance();
+        currenUser = mAuth.getCurrentUser();
+        // Cập nhật trạng thái online
+        if(currenUser != null){
+            UpdateUserStatus("offline");
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mAuth = FirebaseAuth.getInstance();
+        currenUser = mAuth.getCurrentUser();
+        if(currenUser != null){
+            UpdateUserStatus("offline");
         }
     }
 
@@ -134,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.main_logout_option:
                 mAuth.signOut();
+                UpdateUserStatus("offline");
                 SentUserToLoginActivity();
                 break;
             case R.id.main_create_group_option:
@@ -199,5 +227,27 @@ public class MainActivity extends AppCompatActivity {
         }else{
             super.onBackPressed();
         }
+    }
+
+
+    // Cập nhật trạng thái user online/ offline
+    private void UpdateUserStatus(String state){
+        String saveCurrentTime, saveCurrentDate;
+
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat currentDate = new SimpleDateFormat("dd/MM/yyyy");
+        saveCurrentDate = currentDate.format(calendar.getTime());
+
+        SimpleDateFormat currentTime = new SimpleDateFormat("hh:mm a");
+        saveCurrentTime = currentTime.format(calendar.getTime());
+
+        HashMap<String, Object> onlineStateMap = new HashMap<>();
+        onlineStateMap.put("time", saveCurrentTime);
+        onlineStateMap.put("date",saveCurrentDate);
+        onlineStateMap.put("state", state);
+
+        currentUserID = mAuth.getCurrentUser().getUid();
+        RootRef.child("Users").child(currentUserID).child("userState")
+                .updateChildren(onlineStateMap);
     }
 }

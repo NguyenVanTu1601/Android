@@ -21,6 +21,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 public class Login_Activity extends AppCompatActivity {
 
@@ -30,6 +33,7 @@ public class Login_Activity extends AppCompatActivity {
     private TextView needNewAccountLink, ForgetPasswordLink;
     private ImageView ImageLogin;
     private FirebaseAuth mAuth;
+    private DatabaseReference UserRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +67,8 @@ public class Login_Activity extends AppCompatActivity {
         ForgetPasswordLink = findViewById(R.id.forget_password_link);
         ImageLogin = findViewById(R.id.login_image);
         mAuth = FirebaseAuth.getInstance();
+
+        UserRef = FirebaseDatabase.getInstance().getReference().child("Users");
     }
 
     private void openRegister(){
@@ -111,7 +117,22 @@ public class Login_Activity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             currenUser = mAuth.getCurrentUser();
-                            SendUserToMainActivity();
+                            // Xử lý cho Notification ở mục 19 document
+                            String currentUserID = mAuth.getCurrentUser().getUid();
+                            String deviceToken = FirebaseInstanceId.getInstance().getToken();
+                            UserRef.child(currentUserID).child("device_token").setValue(deviceToken)
+                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()){
+                                        // Chuyển màn hình
+                                        SendUserToMainActivity();
+                                    }
+                                }
+                            });
+
+                            // Chuyển màn hình
+                            //SendUserToMainActivity();
                         }else{
                             Toast.makeText(Login_Activity.this, "Đăng nhập thất bại...", Toast.LENGTH_SHORT).show();
                         }
