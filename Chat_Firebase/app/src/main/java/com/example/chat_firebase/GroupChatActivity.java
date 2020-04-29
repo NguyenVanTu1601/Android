@@ -36,10 +36,9 @@ public class GroupChatActivity extends AppCompatActivity {
     private ScrollView mScrollView;
     private TextView displayTextMessage;
     private String currenGroupName, currenUserID, currenUserName;
-    private String currentDate, currentTime; // lưu thời gian gửi tin nhắn
+    private String saveCurrentDate, saveCurrentTime; // lưu thời gian gửi tin nhắn
     private FirebaseAuth mAuth;
     private DatabaseReference UsersRef, GroupNameRef, GroupMessageKeyRef;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +55,6 @@ public class GroupChatActivity extends AppCompatActivity {
         currenGroupName = intent.getStringExtra("groupName");
 
         InitializeFiled();
-
 
         // Tạo toolBar
         CreateToolBar(currenGroupName);
@@ -91,7 +89,6 @@ public class GroupChatActivity extends AppCompatActivity {
         currenUserID = mAuth.getCurrentUser().getUid();
         UsersRef = FirebaseDatabase.getInstance().getReference().child("Users"); // Nhánh user
         GroupNameRef = FirebaseDatabase.getInstance().getReference().child("Groups").child(currenGroupName); // Nhánh có tên là tên group
-
     }
 
     // Lưu tin nhắn vào database
@@ -99,13 +96,13 @@ public class GroupChatActivity extends AppCompatActivity {
         String message = userMessageInput.getText().toString();
         String messageKey = GroupNameRef.push().getKey(); // Tạo ra 1 key bất kì trong nhánh là tên group
         if(!TextUtils.isEmpty(message)){
-            Calendar calForDate = Calendar.getInstance();
-            SimpleDateFormat currentDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-            currentDate = currentDateFormat.format(calForDate.getTime());
 
-            Calendar calForTime = Calendar.getInstance();
-            SimpleDateFormat currentTimeFormat = new SimpleDateFormat("hh:ss a");
-            currentTime = currentTimeFormat.format(calForTime.getTime());
+            Calendar calendar = Calendar.getInstance();
+            SimpleDateFormat currentDate = new SimpleDateFormat("dd/MM/yyyy");
+            saveCurrentDate = currentDate.format(calendar.getTime());
+
+            SimpleDateFormat currentTime = new SimpleDateFormat("hh:mm a");
+            saveCurrentTime = currentTime.format(calendar.getTime());
 
             // Lấy ra nhánh con của group có tên = key đã tạo bên trên
             GroupMessageKeyRef = GroupNameRef.child(messageKey);
@@ -114,8 +111,8 @@ public class GroupChatActivity extends AppCompatActivity {
             HashMap<String,Object> messageInfoMap = new HashMap<>();
                 messageInfoMap.put("name",currenUserName);
                 messageInfoMap.put("message",message);
-                messageInfoMap.put("date",currentDate);
-                messageInfoMap.put("time",currentTime);
+                messageInfoMap.put("date",saveCurrentDate);
+                messageInfoMap.put("time",saveCurrentTime);
             GroupMessageKeyRef.updateChildren(messageInfoMap);
         }
     }
@@ -213,6 +210,8 @@ public class GroupChatActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
         mScrollView.fullScroll(ScrollView.FOCUS_DOWN);
     }
+
 }

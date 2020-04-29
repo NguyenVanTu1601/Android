@@ -92,9 +92,18 @@ Thứ tự thực hiện trong project
    + Trạng thái được lưu giữ trong nhánh userState
    + Hiển thị off, onl trong ChatFragment và trong chat_bar của chatActivity
    + Hiển thị chấm xanh trong contactFragment khi onl
-21. Gửi nhận Image
 
+   Lưu ý : Khi màn hình bị hủy, cập nhập trạng thái ng dùng thành offline
+   Do đó tạo riêng 1 class dành cho việc này là statusUser và nó sẽ được gọi khi activity khởi tạo , và khi activity bị hủy
+   Ys tưởng này k thành công lắm, sẽ sửa chữa sau
+21. Gửi nhận Image  : Dữ liệu vẫn lưu trong nhánh Messages như bình thường
++ Xử lý trng ChatActivity phần chọn Dialog và onResult để gửi ảnh lên firebase
++ Xử lý trong MessagesAdapter để hiển thị về
 
+=> Bị lỗi up 1 ảnh nhưng vừa up xong thì nó hiện 2 -3 lần, phải thoát ra vào lại mới hiện 1 lần => Lỗi này sửa tạm = cách ko đặt code trong onstart nữa
+
+22. Gửi nhận pdf, docx
+Xử lý trong cùng đoạn onResult của gửi ảnh
 
 Error : 1.Lỗi phát sinh : Nếu ng dùng chưa đặt avata thì lúc findFriend sẽ hiện cả người dùng có nút send
         2.Mỗi khi bật lại group chat hau reuqest vd như tạm tắt màn hình nó sẽ tự nhân đôi các tin nhắn

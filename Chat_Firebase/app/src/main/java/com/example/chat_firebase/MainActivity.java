@@ -55,7 +55,9 @@ public class MainActivity extends AppCompatActivity {
         myTabLayout.setupWithViewPager(myViewPager);
 
         //
-
+        mAuth = FirebaseAuth.getInstance();
+        currenUser = mAuth.getCurrentUser();
+        UpdateUserStatus("online");
     }
 
     private void Anhxa() {
@@ -81,16 +83,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        mAuth = FirebaseAuth.getInstance();
-        currenUser = mAuth.getCurrentUser();
-        // Cập nhật trạng thái online
-        if(currenUser != null){
-            UpdateUserStatus("offline");
-        }
-    }
 
     @Override
     protected void onDestroy() {
@@ -101,6 +93,16 @@ public class MainActivity extends AppCompatActivity {
             UpdateUserStatus("offline");
         }
     }
+
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//        mAuth = FirebaseAuth.getInstance();
+//        currenUser = mAuth.getCurrentUser();
+//        if(currenUser != null){
+//            UpdateUserStatus("offline");
+//        }
+//    }
 
     // Kiểm tra thông tin ng dùng chưa có thì chuyển sang form setting
     private void VeriFyUserExistance() {
@@ -160,8 +162,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,SettingsActivity.class));
                 break;
             case R.id.main_logout_option:
-                mAuth.signOut();
                 UpdateUserStatus("offline");
+                mAuth.signOut();
                 SentUserToLoginActivity();
                 break;
             case R.id.main_create_group_option:

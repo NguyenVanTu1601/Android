@@ -11,9 +11,8 @@
         android:id="@+id/linear_line_user">
         <de.hdodenhof.circleimageview.CircleImageView
             android:transitionName="imageTransition"
-            android:layout_gravity="center"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:src="@drawable/profile_image"
             android:id="@+id/users_profile_image"
             app:civ_border_color="#17C77D"
@@ -35,7 +34,6 @@
                     android:layout_height="wrap_content"
                     android:text="User name"
                     android:textSize="18sp"
-                    android:layout_weight="8"
                     android:textStyle="bold"/>
                 <ImageView
                     android:id="@+id/user_online_status"
@@ -43,6 +41,7 @@
                     android:layout_height="15dp"
                     android:src="@drawable/online"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp"
                     android:visibility="invisible"/>
             </LinearLayout>

@@ -41,8 +41,6 @@ public class FindFriendsActivity extends AppCompatActivity {
         // Khởi tạo
         InitializeField();
 
-
-
     }
 
     // Khởi tạo ban đầu
@@ -133,4 +131,5 @@ public class FindFriendsActivity extends AppCompatActivity {
 
         startActivity(profileIntent,options.toBundle());
     }
+
 }

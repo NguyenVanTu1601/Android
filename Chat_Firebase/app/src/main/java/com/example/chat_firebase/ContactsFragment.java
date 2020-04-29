@@ -104,7 +104,7 @@ public class ContactsFragment extends Fragment {
                                 String time = dataSnapshot.child("userState").child("time").getValue().toString();
 
                                 if(state.equals("online")){
-                                    holder.onlineIcon.setVisibility(View.INVISIBLE);
+                                    holder.onlineIcon.setVisibility(View.VISIBLE);
                                 }else if (state.equals("offline")){
                                     holder.onlineIcon.setVisibility(View.INVISIBLE);
                                 }
