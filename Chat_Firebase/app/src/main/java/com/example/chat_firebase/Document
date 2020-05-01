@@ -105,6 +105,9 @@ Thứ tự thực hiện trong project
 22. Gửi nhận pdf, docx
 Xử lý trong cùng đoạn onResult của gửi ảnh
 
+23. Xóa tin nhắn
+https://www.youtube.com/watch?v=TNxsRBeNqBc&list=PLxefhmF0pcPmtdoud8f64EpgapkclCllj&index=61
+
 Error : 1.Lỗi phát sinh : Nếu ng dùng chưa đặt avata thì lúc findFriend sẽ hiện cả người dùng có nút send
         2.Mỗi khi bật lại group chat hau reuqest vd như tạm tắt màn hình nó sẽ tự nhân đôi các tin nhắn
  -> Do mỗi lần vào onStart nó sự tự khởi động và nhận thay đổi về. Tuy nhiên nó chỉ lỗi khi đọc addChild ... có thể do chưa hiểu

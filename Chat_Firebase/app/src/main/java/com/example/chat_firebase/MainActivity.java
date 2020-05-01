@@ -1,6 +1,7 @@
 package com.example.chat_firebase;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -10,14 +11,20 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -26,12 +33,15 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
-public class MainActivity extends AppCompatActivity {
+import de.hdodenhof.circleimageview.CircleImageView;
+
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private Toolbar myToolbar;
     private ViewPager myViewPager;
     private TabLayout myTabLayout;
@@ -40,15 +50,17 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private DatabaseReference RootRef;
     private String currentUserID;
+
+    private CircleImageView imageDrawer;
+    private TextView textNameDrawer;
+    private TextView textStatusDrawer;
+
+    private DrawerLayout drawerLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Anhxa();
-
-        // Tạo toolbar
-        setSupportActionBar(myToolbar);
-        getSupportActionBar().setTitle("Chat App");
 
         // tạo viewPager và thêm tablayout vào
         myViewPager.setAdapter(myTabsAcessorAdapter);
@@ -58,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         currenUser = mAuth.getCurrentUser();
         UpdateUserStatus("online");
+
+        RetrieveUserInfo();
     }
 
     private void Anhxa() {
@@ -67,6 +81,28 @@ public class MainActivity extends AppCompatActivity {
         myTabsAcessorAdapter   = new TabsAcessorAdapter(getSupportFragmentManager());
         currenUser = null;
         RootRef = FirebaseDatabase.getInstance().getReference();
+
+        // Tạo toolbar
+        setSupportActionBar(myToolbar);
+        getSupportActionBar().setTitle("Chat App");
+
+        // Anh xa drawer, va toggle điều khiển đóng mở
+        drawerLayout = findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout,myToolbar,
+                R.string.navigation_drawer_open,
+                R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+        // Anh xạ Navigation
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        View header = navigationView.getHeaderView(0);
+        imageDrawer = header.findViewById(R.id.image_drawer);
+        textNameDrawer = header.findViewById(R.id.name_drawer);
+        textStatusDrawer = header.findViewById(R.id.status_drawer);
+
     }
 
     // Bắt đầu chạy ktra xem đăng nhập chưa, chưa thì quay lại màn hình đăng nhập
@@ -219,19 +255,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // bấm vào nút back cứng trên đt
-    @Override
-    public void onBackPressed() {
-        mAuth = FirebaseAuth.getInstance();
-        currenUser = mAuth.getCurrentUser();
-        if(currenUser != null){
-
-        }else{
-            super.onBackPressed();
-        }
-    }
-
-
     // Cập nhật trạng thái user online/ offline
     private void UpdateUserStatus(String state){
         String saveCurrentTime, saveCurrentDate;
@@ -251,5 +274,84 @@ public class MainActivity extends AppCompatActivity {
         currentUserID = mAuth.getCurrentUser().getUid();
         RootRef.child("Users").child(currentUserID).child("userState")
                 .updateChildren(onlineStateMap);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.find_friends_drawer:
+                startActivity(new Intent(MainActivity.this, FindFriendsActivity.class));
+                break;
+            case R.id.profile_drawer:
+                startActivity(new Intent(MainActivity.this,SettingsActivity.class));
+                break;
+            case R.id.logout_drawer:
+                UpdateUserStatus("offline");
+                mAuth.signOut();
+                SentUserToLoginActivity();
+                break;
+            case R.id.create_group_:
+                RequestNewGroup();
+                break;
+            case R.id.contacts_author:
+                startActivity(new Intent(MainActivity.this,AuthorActivity.class));
+                break;
+
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    // Bật tắt nav
+    @Override
+    public void onBackPressed() {
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }else{
+            mAuth = FirebaseAuth.getInstance();
+            currenUser = mAuth.getCurrentUser();
+            if(currenUser != null){
+
+            }else{
+                super.onBackPressed();
+            }
+        }
+
+
+    }
+
+    private void RetrieveUserInfo(){
+        String currenUserID = mAuth.getCurrentUser().getUid();
+        RootRef.child("Users").child(currenUserID)
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if((dataSnapshot.exists())&&(dataSnapshot.hasChild("name"))&&(dataSnapshot.hasChild("image"))){
+
+                            String retrieveUserName = dataSnapshot.child("name").getValue().toString();
+                            String retrieveUserStatus = dataSnapshot.child("status").getValue().toString();
+                            String retrieveProfileImage = dataSnapshot.child("image").getValue().toString();
+
+                            textNameDrawer.setText(retrieveUserName);
+                            textStatusDrawer.setText(retrieveUserStatus);
+                            Picasso.with(MainActivity.this).load(retrieveProfileImage)
+                                    .into(imageDrawer);
+
+                        }else if((dataSnapshot.exists())&&(dataSnapshot.hasChild("name"))){
+
+                            String retrieveUserName = dataSnapshot.child("name").getValue().toString();
+                            String retrieveUserStatus = dataSnapshot.child("status").getValue().toString();
+
+                            textNameDrawer.setText(retrieveUserName);
+                            textStatusDrawer.setText(retrieveUserStatus);
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
     }
 }
