@@ -25,7 +25,7 @@ import com.google.android.exoplayer2.upstream.TransferListener;
 public class MainActivity extends AppCompatActivity {
     SimpleExoPlayer exoPlayer;
     PlayerView exoPlayerView;
-    String videourl = "https://www.radiantmediaplayer.com/media/bbb-360p.mp4";
+    String videourl = "https://khoapham.vn/download/vuoncaovietnam.mp4";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

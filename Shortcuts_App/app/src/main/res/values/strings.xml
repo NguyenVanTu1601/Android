@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Shortcuts_App</string>
+    <string name="camera">Camera</string>
+    <string name="chat">Chat</string>
+</resources>

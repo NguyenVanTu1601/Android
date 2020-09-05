@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     private void Xacnhanxoa(final int vitri){
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Thông báo!");
         alert.setIcon(R.mipmap.ic_launcher);
         alert.setMessage("Xác nhận xóa tên của " + arrayList.get(vitri));
@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
         alert.setNegativeButton("Không", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
             }
         });
         alert.show();

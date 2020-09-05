@@ -1,0 +1,41 @@
+- Các quyền sử dụng :
++ READ_EXTERNAL_STORAGE
++ android:requestLegacyExternalStorage="true"
++ tools:targetApi="q"
+
+- Cách kiểm tra, xin quyền : READ_EXTERNAL_STORAGE trong activity CreateNoteActivity
+
+- Đọc ảnh từ storage, lấy uri và đường dẫn filePath
+ + Uri dùng để hiển thị ảnh trong onActivityResult : Tức là khi vừa nhận ảnh kq về
+ + Path dùng để đọc ảnh từ bất kì vị trí nào trong app. Nó trực tiếp trỏ vào ảnh : Đọc ảnh bằng Path sử dụng BitmapFactory
+ + Sử dụng Cursor get Path từ Uri : getPathFromUri()
+-> Do đó cần chuyển từ Uri sang Path để thuận tiện cho việc hiển thị
+
+- Custom lại AlertDialog trong hàm showAddUrlDialog() + Pattern_Matcher (Url) / deleteNoteDialog()
+ + Custom Dialog
+ + Ánh xạ các view trong dialog
+
+- RecyckerView + layoutManager : StaggeredGridLayoutManager : Tạo bố cục đẹp ở MainActivity
+
+- Sử dụng BottomSheetBehavior : Tạo 1 hộp nhỏ kéo lên xuống ở đáy màn hình
+ + Custom để sử dụng
+ + Ánh xạ các view, button...
+
+- Sử dụng GradienDrawable để thay đổi màu sắc cho background của 1 view
+
+- Cách sử dụng thêm Timer ....dùng để searchNote . Trong class NoteAdapter
+
+
+- Thứ tự thực hiện project
+ + Xử lý giao diện ban đầu
+ + Cài đặt RoomDatabase
+ + Create and Save Note
+ + Hiển thị note
+ + Thêm màu cho note < Miscellaneous >
+ + Thêm ảnh < Miscellaneous >
+ + Thêm url < Miscellaneous >
+ + Hiển thị và sửa note
+ + Xóa ảnh, xóa url
+ + Xóa note
+ + Tìm kiếm note
+ + Chức năng cho các nút thêm nhanh góc dưới màn hình Main

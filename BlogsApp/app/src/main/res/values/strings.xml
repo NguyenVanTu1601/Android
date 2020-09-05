@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BlogsApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="status_drawer">Sinh viên năm 4 Học viện Công nghệ Bưu chính viễn thông, code project học tập thêm kinh nghiệm cho bản thân</string>
+    <string name="photo_info">Bạn chưa không có bức ảnh nào. Hãy tới và chia sẻ những khoảng khắc đẹp với mọi người bạn nhé</string>
+</resources>

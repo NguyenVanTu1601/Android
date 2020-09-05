@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TabLayout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="delivered_fragment">Delivered Fragment</string>
+    <string name="confirmed_fragment">Confirmed Fragment</string>
+    <string name="pending_fragment">Pending Fragment</string>
+</resources>

@@ -1,0 +1,12 @@
+- Đây là 1 dạng csdl như SQLite
+- Để sử dụng cần thêm vào build.gradle
+ + dataBinding { enabled = true}
+
+- Tạo class User với các thuộc tính để ở public
+
+- Trong activity_main
++ variable name = "user" : cái này sẽ sử dụng để gọi bên dưới
++ các text = "..." thay vì gọi trực tiếp sẽ thay thành text = "@{user.name}"
+     với user là cái name bên trên
+         name là thuộc tính class user
+- Project này học về : Android Architecture Components nên databinding chỉ là 1 phần thôi nhé

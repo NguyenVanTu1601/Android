@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/layout_item_credit"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="10"
+    android:orientation="horizontal"
+    android:layout_margin="@dimen/_5sdp">
+
+    <ImageView
+        android:id="@+id/imageItemCredit"
+        android:layout_width="0dp"
+        android:padding="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_card"
+        android:background="@color/colorActionBar"/>
+
+    <LinearLayout
+
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textNameCredit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiền mặt"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/_11ssp"/>
+        <TextView
+            android:id="@+id/textMoneyCredit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.500.000 đ"
+            android:textColor="@color/colorActionBar"
+            android:textSize="@dimen/_13ssp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/colorDivider"
+            android:layout_marginTop="@dimen/_5sdp"/>
+    </LinearLayout>
+</LinearLayout>

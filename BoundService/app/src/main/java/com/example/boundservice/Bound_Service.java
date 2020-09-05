@@ -18,7 +18,10 @@ import java.util.Date;
  * Tạo hàm getCurrent() để thấy sự tương tác giữa ng dùng và service
  */
 public class Bound_Service extends Service {
-    //Thao thác : 1.overrider phương thức chính, 2. Tạo class BoundExamble, 3. Khai báo iBinder 4. Return trong hàm onBind
+    //Thao thác : 1.overrider phương thức chính
+    // 2. Tạo class BoundExamble hoặc các lớp khác tương tự extent Binder mục đích để tạo ra thằng iBinder bước 3,4
+    // 3. Khai báo iBinder
+    // 4. Return iBinder trong hàm onBind, iBinder này sẽ truyền sang Main, nhờ đó gọi các hàm
     IBinder iBinder = new BoundExamble();
 
     @Override
@@ -54,6 +57,7 @@ public class Bound_Service extends Service {
         }
     }
 
+    // Phương thức chính cần thực hiện
     public String getCurrent(){
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss MM/dd/yyyy");
         return simpleDateFormat.format(new Date());

@@ -1,0 +1,9 @@
+GET: được sử dụng để lấy thông tin từ sever theo URI đã cung cấp.
+HEAD: giống với GET nhưng response trả về không có body, chỉ có header
+POST: gửi thông tin tới sever thông qua các biểu mẫu http( đăng kí chả hạn..)
+PUT: ghi đè tất cả thông tin của đối tượng với những gì được gửi lên
+PATCH: ghi đè các thông tin được thay đổi của đối tượng.
+DELETE: xóa tài nguyên trên server.
+
+- Tìm hiểu HttpLoggingInterceptor : trả về các thông tin thay đổi khi put dữ liệu
+- Header trong @PUT

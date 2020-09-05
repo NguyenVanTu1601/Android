@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progess_bar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        style="@style/CircularDeterminateProgressBar"
+        android:progressDrawable="@drawable/circle"
+        tools:progress = "0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_progess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/progess_bar"
+        app:layout_constraintEnd_toEndOf="@+id/progess_bar"
+        app:layout_constraintStart_toStartOf="@+id/progess_bar"
+        app:layout_constraintTop_toTopOf="@+id/progess_bar"
+        tools:text="60%" />
+
+    <Button
+        android:id="@+id/button_decr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- 10%"
+        app:layout_constraintStart_toStartOf="@+id/progess_bar"
+        app:layout_constraintTop_toBottomOf="@+id/progess_bar" />
+    <Button
+        android:id="@+id/button_incr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+ 10%"
+        app:layout_constraintEnd_toEndOf="@+id/progess_bar"
+        app:layout_constraintTop_toBottomOf="@+id/progess_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

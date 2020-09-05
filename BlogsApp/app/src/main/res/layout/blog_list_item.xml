@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:background="#FFFFFF">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/item_profile_image"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/profile_image"
+                android:layout_gravity="start"
+                android:layout_weight="2"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:weightSum="10"
+                android:padding="@dimen/_5sdp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/item_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="User name"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:gravity="center|left"
+                    android:layout_weight="5"/>
+                <TextView
+                    android:id="@+id/item_date_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Date time"
+                    android:gravity="center|left"
+                    android:layout_weight="5"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_170sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_macdinh"/>
+
+    <TextView
+        android:id="@+id/item_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description "
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:fontFamily="@font/ubuntu_regular"
+        android:textSize="@dimen/_13ssp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp">
+        <ImageView
+            android:id="@+id/item_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_favorite"
+            android:foregroundGravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/item_number_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 likes"
+            android:textColor="#000000"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/item_favorite"/>
+
+        <TextView
+            android:id="@+id/item_comment_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Comment"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <ImageView
+            android:id="@+id/item_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_comment"
+            app:layout_constraintEnd_toStartOf="@id/item_comment_number"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/listViewComment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/layoutComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:visibility="gone">
+        <EditText
+            android:layout_weight="9"
+            android:id="@+id/textComment"
+            android:layout_width="0dp"
+            android:textSize="@dimen/_10ssp"
+            android:background="@drawable/background_input"
+            android:hint="Bình luận về bức ảnh này nào..."
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_marginStart="@dimen/_2sdp"
+            android:id="@+id/buttonComment"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="@drawable/ic_send"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <View
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_20sdp"/>
+</LinearLayout>

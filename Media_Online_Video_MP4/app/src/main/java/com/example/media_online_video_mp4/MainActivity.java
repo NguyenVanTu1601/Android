@@ -19,11 +19,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btnMp4 = findViewById(R.id.button);
         videoView = findViewById(R.id.videoView);
-        String url = "https://khoapham.vn/download/vuoncaovietnam.mp4";
+        final String url = "https://khoapham.vn/download/vuoncaovietnam.mp4";
+        final String url2 = "https://www.radiantmediaplayer.com/media/bbb-360p.mp4";
         btnMp4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.radiantmediaplayer.com/media/bbb-360p.mp4");
+                Uri uri = Uri.parse(url2);
                 videoView.setVideoURI(uri);
                 videoView.setMediaController(new MediaController(MainActivity.this));
                 videoView.start();

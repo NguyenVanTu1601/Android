@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F44336</color>
+    <color name="colorPrimaryDark">#D32F2F</color>
+    <color name="colorAccent">#448AFF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorDivider">#8F8F8F</color>
+    <color name="colorActionBar">#2CBC6D</color>
+    <color name="colorIcon">#2e3131</color>
+    <color name="colorTabLayout">#DBDBDB</color>
+    <color name="colorNewCredit">#89F87C</color>
+    <color name="colorDefaultRadio">#333333</color>
+    <color name="colorRadioBackground">#1F1F1F</color>
+    <color name="colorText">#333333</color>
+</resources>

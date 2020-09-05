@@ -17,6 +17,10 @@ import okhttp3.Request;
 import okhttp3.Request.Builder;
 import okhttp3.Response;
 
+/**
+ * Có thể xem VD khác tại :
+ * https://www.youtube.com/watch?v=oGWJ8xD2W6k&list=PLrnPJCHvNZuCPNCW2xdriIUgxmo9-QcFi&index=16
+ */
 public class GetUrl_Activity extends AppCompatActivity {
     Button btnCheck;
     EditText edtUrl;

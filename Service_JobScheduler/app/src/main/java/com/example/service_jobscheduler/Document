@@ -1,0 +1,18 @@
+Giới thiệu :
+1. JobScheduler đã được android giới thiệu ở bản release của Android 5.0 Lollipop (API 21)
+và được áp dụng từ android 5.0 trở lên nó được tạo ra để lên lịch thực hiện các Task vụ của bạn
+Ví dụ như :
+Các task cần được thực hiện khi device được kết nối với nguồn điện
+Các task cần kết nối internet
+Các task chạy thường xuyên (1lan/ngay...) ...........
+
+- onStartJob() là nơi đặt logic công việc cần làm, return false nếu tiến trình có thể chạy trên main thread, return true nếu cần chia
+ra làm nhiều tiến trình khác nhau. Khi hoàn thành task chúng ta cần gọi jobFinished (JobParameters params, boolean needsReschedule)
+để xác nhận job đã hoàn thành và xác định thêm có hay không reschedule job hay không (true : có reschedule , false : không)
+
+- onStopJob() được gọi bởi hệ thống nếu task đang thực hiện bị hủy trước khi task vụ kết thúc :
+Điều này thường xảy ra khi điều kiện công việc của bạn không còn được đáp ứng (như mất internet nếu task bạn thực hiện cần internet ...)
+
+2. Sử dụng
+- Quyền permission : BIND_JOB_SERVICE
+- Chương trình này đếm các số từ 0-> 10. Nếu tắt wifi hoặc ấn cancel thì ctrinh sẽ dừng lại

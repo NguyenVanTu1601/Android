@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment.Fragment_VietNam">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="#9A1241"
+                android:text="Việt Nam"/>
+            <LinearLayout
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số ca nhiễm"
+                    android:id="@+id/VN_Socanhiem"
+                    android:textColor="#9A1241"
+                    android:textSize="16sp"
+                    android:layout_weight="5"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đang điều trị"
+                    android:id="@+id/VN_Dangdieutri"
+                    android:textColor="#FF9800"
+                    android:textSize="16sp"
+                    android:layout_weight="5"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đã khỏi"
+                    android:id="@+id/VN_Dakhoi"
+                    android:textColor="#4BF1A9"
+                    android:textSize="16sp"
+                    android:layout_weight="5"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tử vong"
+                    android:id="@+id/VN_TuVong"
+                    android:textColor="#FCF10A0A"
+                    android:textSize="16sp"
+                    android:layout_weight="5"/>
+            </LinearLayout>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:id="@+id/barCharVietNam"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="Thế giới"/>
+            <LinearLayout
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số ca nhiễm"
+                    android:id="@+id/TG_Socanhiem"
+                    android:textColor="#9A1241"
+                    android:textSize="16sp"
+                    android:layout_weight="5"/>
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đang điều trị"
+                android:id="@+id/TG_Dangdieutri"
+                android:textColor="#FF9800"
+                android:textSize="16sp"
+                />
+            <LinearLayout
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đã khỏi"
+                    android:id="@+id/TG_Dakhoi"
+                    android:textColor="#4BF1A9"
+                    android:textSize="16sp"
+                    android:layout_weight="5"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tử vong"
+                    android:id="@+id/TG_Tuvong"
+                    android:textColor="#FCF10A0A"
+                    android:textSize="16sp"
+                    android:layout_weight="5"/>
+            </LinearLayout>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:id="@+id/barCharThegioi"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/ncov_Chitiet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="20dp"
+                android:autoLink="web"
+                android:linksClickable="true"
+                android:textColorLink="#27EF88"
+                android:text="Xem chi tiết tại : https://ncov.moh.gov.vn/"
+                android:textSize="18sp"
+                android:textColor="#090909"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

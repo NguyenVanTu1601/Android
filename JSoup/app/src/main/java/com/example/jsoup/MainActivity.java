@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
                         Document document = Jsoup.parse(response);
                         if(document != null){
-                            // Cách chuyển 1 số thẻ html để gọi từ androdi
+                            // Cách chuyển 1 số thẻ html để gọi từ android
                             // <td name = "phat"> -> td[name="phat"]
                             // <div class ="phat"> -> div[class = phat] hoặc div.phat
 

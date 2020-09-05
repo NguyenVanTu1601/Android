@@ -1,0 +1,7 @@
+1. Tạo class App extend Application
+2. Thêm vào Manifest : name = ".App"
+3. Thêm text, button vào activity main
+4. Tạo class example Service
+5. Tạo các thao tác cho button trong Main Activity
+6. Code cho hàm onstartCommand của ExampleService
+7. Code xong thêm thẻ service vào manifes

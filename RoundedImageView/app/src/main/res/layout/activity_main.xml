@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/image7"
+        app:riv_border_width="2dip"
+        app:riv_border_color="#333333"
+        app:riv_mutate_background="true"
+        android:scaleType="fitXY"
+        app:riv_corner_radius_top_right="125dp"
+        android:layout_marginTop="20dp"
+        app:riv_corner_radius_bottom_left="125dp"
+        app:riv_corner_radius_bottom_right="125dp"
+        app:riv_corner_radius_top_left="125dp"
+        tools:ignore="MissingConstraints" />
+
+</LinearLayout>

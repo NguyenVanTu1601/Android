@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        app:showAsAction="always"
+        android:id="@+id/viet_nam"
+        android:icon="@drawable/ic_vietnam"
+        android:title="@string/viet_nam" />
+
+    <item
+        app:showAsAction="always"
+        android:id="@+id/the_gioi"
+        android:icon="@drawable/world"
+        android:title="@string/the_gioi" />
+
+    <item
+        app:showAsAction="always"
+        android:id="@+id/huong_dan"
+        android:icon="@drawable/notebook"
+        android:title="@string/huong_dan" />
+
+    <item
+        app:showAsAction="always"
+        android:id="@+id/contact_author"
+        android:icon="@drawable/poem"
+        android:title="@string/author" />
+</menu>

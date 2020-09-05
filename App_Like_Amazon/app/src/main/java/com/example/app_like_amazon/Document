@@ -1,0 +1,19 @@
+1. Thư viện sử dụng
+ + Firebase
+ + Thư viện chứa các material như progessbar, checkbox...: https://github.com/rey5137/material tương tự Lottie animation
+ + Thư viện lưu trữ dữ liệu đơn giản : tương tự frequence .. để làm checkBox : https://github.com/pilgr/Paper
+ + Thư viện cắt một phần ảnh : https://github.com/ArthurHub/Android-Image-Cropper sử dụng trong SettingActivity
+ + Thư viện bo ảnh thành hình tròn :
+ + Trang web tổng hợp nhiều thư viện : https://android-arsenal.com/
+
+ // Picasso 2.3.3 dùng trong này sẽ bị lỗi @@
+2. Danh sách tài khoản
+ + Admin : 0387478518 - admin , 0984313774 - admin
+ + User :
+3. Một số thứ học được
+ + textAlignment : dùng để chỉnh vị trí text trong TextView
+ + ProductsDetailActivity, intent có nhận key = pid để thực hiện thao tác. Do đó dù từ Activity nào gọi với mục đích gì cũng phải truyền key vào
+   Chẳng hạn như đoạn gọi từ CartActivity
+
+
+

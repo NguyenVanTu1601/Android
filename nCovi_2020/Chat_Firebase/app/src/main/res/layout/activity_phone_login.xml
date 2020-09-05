@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PhoneLoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Login with PhoneNumber"
+        android:textSize="25sp"
+        android:layout_marginTop="50dp"
+        android:textColor="#00FFA6"/>
+    <EditText
+        android:layout_marginTop="50dp"
+        android:id="@+id/phone_number_input"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/inputs"
+        android:drawableStart="@drawable/phone"
+        android:gravity="center"
+        android:hint="Write phone number (+84...)"
+        android:textAllCaps="false"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+
+
+    <Button
+        android:id="@+id/send_ver_code_button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_login"
+        android:text="Send Verification code"/>
+    <EditText
+        android:id="@+id/verification_code_input"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/inputs"
+        android:drawableStart="@drawable/password"
+        android:gravity="center"
+        android:padding="3dp"
+        android:hint="Write verification code number"
+        android:textAllCaps="false"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        />
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/verify_button"
+        android:text="Verify"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_login"
+        android:visibility="invisible"/>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="9">
+        <TextView
+            android:id="@+id/dayDeal"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_25sdp"
+            android:padding="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="30"/>
+
+        <LinearLayout
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/dayOfWeekDeal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thứ sáu"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_13ssp"/>
+            <TextView
+                android:id="@+id/monthOfYearDeal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tháng 8 2020"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_13ssp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/moneyDeal"
+                android:layout_weight="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:text="+ 0 đ"
+                android:textColor="@color/colorActionBar"
+                android:padding="@dimen/_15sdp"
+                android:textSize="@dimen/_13ssp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="false"
+            android:id="@+id/recyclerView_item_deal"/>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

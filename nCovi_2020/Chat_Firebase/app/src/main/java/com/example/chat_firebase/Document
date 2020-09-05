@@ -1,0 +1,115 @@
+Thứ tự thực hiện trong project
+1. Tạo project kết nối Firebase
+2. Tạo ViewPager, Tab, 3 Fragment trong MainActivity
+3. Tạo Activity Login, Register và kết nối tới FireBase Auth
+4. Tạo menu setting, logout
+5. Kết nối database thêm thông tin user lên đó thông qua uID của người đăng nhập và form Setting
+6. Chức năng lấy thông tin ng dùng về RetrieveUserInfo trong SettingActivity
+7. Tạo group chat trong MainActivity : RequestNewGroup
+8. Đọc group về : RetrieveDataOnlistView
+9. Gửi tin nhắn lên group chat và nhận tin nhắn về trong class groupChatActivity + sự kiện tự scroll
+11. Chức năng đăng nhập bằng sđt
+   + Lần đầu là gửi code về
+   + Lần sau sẽ sử dụng code để login
+12. Chọn ảnh từ máy và 1 số tính năng về ảnh
+   + Thêm thư viện và thêm trong menifes theo hướng dẫn
+   https://github.com/ArthurHub/Android-Image-Cropper
+13. Up ảnh và nhận ảnh từ firebase
+14. Tạo Activity findFriends và sửa 1 tí trong Manifes phần ActivityFindFriends
+    Thêm thư viện firebaseUI database : https://github.com/firebase/FirebaseUI-Android
+    Sử dụng RelativeLayout
+15. Sự kiện click vào 1 user hiện thông tin và gửi yêu cầu chat trong profileActivity
+    + Kiểm tra đã gửi yêu cầu chưa, chưa thì tạo nhánh cây mới cho cả bên gửi và bên nhận : nhánh cây yêu cầu Chat Request
+    Bên gửi có values = sent
+    Bên nhận có values = recieved
+    + Xóa nhánh cây nếu bỏ yêu cầu chat
+
+    => Thao tác chính của phần này : Khi click vào 1 user có 1 số hiện trạng sau
+    - Nếu chưa gửi kb tới ng đó thì xử lý ntn -> click để gửi
+    - Nếu ng đó gửi kb tới r mà từ chỗi thì xử lý như nào -> hủy hết các nhánh cây đã tạo
+    - Nếu ng đó gửi tới mà chấp nhận thì như nào
+      + Tạo ra một cây mới là cây liên hệ giữa 2 người : nhánh cây Contacts
+      + Xóa yêu cầu ChatRequest từ cả 2 phía nhận và gửi
+      + Cập nhật trạng thái currenStatus thành friends
+      + Đổi nút thành remove contact để có thể xóa kết bạn
+      + xử lý khi đọc dữ liệu là friend và muốn hủy kết bạn khi nhấn nút
+
+    Xử lý thông qua các 2 button đã có
+
+    - Layout dùng để custom là user_display_layout... Chứa các thông tin cơ bản về 2 nút Accept, Cancel để chấp nhận hoặc
+    không chấp nhận yêu cầu thêm bạn, tuy nhiên 2 nút này chỉ hiện khi mở từ requestFragment còn bình thường nó bị INVISIBLE
+
+
+16. Hiển thị danh sách các Contacts : Tức là các danh sách yêu cầu kết bạn
+    Tương tự phần findFriends sử dụng RecyclerView và FirebaseUIDatabase
+
+17. Tạo fragment : RequestFragment và thêm vào tablayout
+    Sử dụng như findFriends và Contacts thêm danh sách yêu cầu vào RecyclerView
+    Tuy nhiên trong lần lấy dữ liệu này cần ktra
+    + Nếu received_type = sent tức là đang gửi đi -> thông tin nay ko lấy
+    + Nếu received_type = received tức là nhận được lời kb. Cái này mới lấy
+    LayoutCustom sử dụng :  users_display_layout
+
+    Xử lý sự kiện với 2 button
+    + Nếu accept :
+
+    DatabaseUI của firebase truy cập nhánh, nếu có dữ liệu nó sẽ đọc luôn ra nên chưa biết cách sửa trong phần này
+    Thay vào đó sẽ sử dụng ListView thông thường và đọc dữ liệu :))
+    ... Sau một hồi tính toán thì vẫn sẽ sd UI. Và sửa trong else nếu type khác recieved
+
+18. Tạo chatFragment tiếp tục sử dụng FirebaseUI
+- ChatFragment hiển thị danh sách liên hệ như contacts nhưng có thêm thời gian online hoặc offline bao nhiêu phút
+- Khi click vào 1 item trong chatFragment sẽ mở activity chat riêng giữa 2 người : ChatActivity
+   + Phần này có custom lại toolBar trong layout : custom_chat_toolbar và gọi trong ChatActivity
+- Xử lý send messages lên firebaseDatabase trong hàm SendMessages của ChatActivity
+   + Thực ra phần này có thể ko cần làm phức tạp, chỉ cần xử lý giống groupchat thôi, nhưng do muốn phân biệt rõ tin nhắn do aii gửi lên và hiển thị
+   bên gửi, nhận khác nhau nên phải chuẩn hóa như trong ChatActivity
+- Custom Messages Layout:
+  + sender_messages :
+  + receiver_messages trong drawable
+  + custom_messages_layout trong layout : dùng để hiển thị tin nhắn, nếu ngkhacs gửi thì hiện bên trái, nếu mình gửi thì hiện bên phải
+
+
+- Hiển thị tin nhắn lấy từ firbase về (xử lý trong messagesAdapter và chatActivity)
+- Smooth Scroll cho RecyclerView.
+
+19. Tạo notification khi có thông báo 1 yêu cầu kb tới sử dụng Firebase Console
+  + Tải nodejs theo video nodejs-socketio của khoa phạm, vào cmd ktra version npm, node
+  + install : npm install -g firebase-tools
+  + chờ cài xong gõ tiếp: firebase login, hiện bảng Y/n chọn n và đăng nhập tài khoản sd để tạo firrebase
+  + Tạo ngoài destop 1 folder Notification , mở ra xem đường dẫn và nhập vào cmd : cd/User/..... đường dẫn tới folder
+  + Tiếp tục gõ firebase init trong dòng mới được tạo ra và nhập Y
+  + Chọn tới cloud function ấn space sau đó chọn an xists project rồi chọn project firebase của mình đang làm
+  + Chọn ngôn ngữ js chọn n sau đó y chờ nó báo complete!
+  + Mở folder Notificaion khi nãy mở function -> index.js mở bằng sublinetext3 và gõ như trong file đã gõ
+  + Sử dụng tiếp cmd khi nãy gõ firebase deploy
+  + import thư viện có tên messaging (tạo tên này trong file index.js)
+
+  + Notification này được tạo trong  profile activity do trong profile có nút gửi yêu cầu kết bạn (send chat request)
+  + Được tạo kèm theo 1 số phần như login : thêm nhánh deviceToken
+
+20. Lưu giữ và hiển thị trạng thái online, offline trong MainActivity
+   + Trạng thái được lưu giữ trong nhánh userState
+   + Hiển thị off, onl trong ChatFragment và trong chat_bar của chatActivity
+   + Hiển thị chấm xanh trong contactFragment khi onl
+
+   Lưu ý : Khi màn hình bị hủy, cập nhập trạng thái ng dùng thành offline
+   Do đó tạo riêng 1 class dành cho việc này là statusUser và nó sẽ được gọi khi activity khởi tạo , và khi activity bị hủy
+   Ys tưởng này k thành công lắm, sẽ sửa chữa sau
+21. Gửi nhận Image  : Dữ liệu vẫn lưu trong nhánh Messages như bình thường
++ Xử lý trng ChatActivity phần chọn Dialog và onResult để gửi ảnh lên firebase
++ Xử lý trong MessagesAdapter để hiển thị về
+
+=> Bị lỗi up 1 ảnh nhưng vừa up xong thì nó hiện 2 -3 lần, phải thoát ra vào lại mới hiện 1 lần => Lỗi này sửa tạm = cách ko đặt code trong onstart nữa
+
+22. Gửi nhận pdf, docx
+Xử lý trong cùng đoạn onResult của gửi ảnh
+
+23. Xóa tin nhắn
+https://www.youtube.com/watch?v=TNxsRBeNqBc&list=PLxefhmF0pcPmtdoud8f64EpgapkclCllj&index=61
+
+Error : 1.Lỗi phát sinh : Nếu ng dùng chưa đặt avata thì lúc findFriend sẽ hiện cả người dùng có nút send
+        2.Mỗi khi bật lại group chat hau reuqest vd như tạm tắt màn hình nó sẽ tự nhân đôi các tin nhắn
+ -> Do mỗi lần vào onStart nó sự tự khởi động và nhận thay đổi về. Tuy nhiên nó chỉ lỗi khi đọc addChild ... có thể do chưa hiểu
+ hết các sử dụng
+ => Chuyển nó vào onCreate để tạo 1 lần lúc khởi động thôi => Đã sửa

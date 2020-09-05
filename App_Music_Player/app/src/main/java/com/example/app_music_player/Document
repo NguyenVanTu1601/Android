@@ -1,0 +1,4 @@
+1. SmartPlayerActivity dùng để điều khiển bằng giọng nói
+Trong đó sử dụng SpeechRecognizer là trình điều khiển ghi giọng nói
+
+2. MainActivity dùng để đọc danh sách các bài hát trong bộ nhớ máy

@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                final String url = edtPicasso.getText().toString().trim();
+                final String url = "https://firebasestorage.googleapis.com/v0/b/app-d8be7.appspot.com/o/Product%20Images%2F2256319Th" +
+                        "5%2028%2C2020_15%3A37%3A32%20PM.jpg?alt=media&token=0aff87ab-5ea1-4cdb-bbca-030f7d2e13e1";
                 if(url.equals("")){
                     imgPicasso.setImageResource(R.drawable.anhthiennhien);
                 }else{

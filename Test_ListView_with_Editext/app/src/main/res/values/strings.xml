@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Test_ListView_with_Editext</string>
+    <string name="long_nhan">Long nhãn</string>
+    <string name="search">Search</string>
 </resources>

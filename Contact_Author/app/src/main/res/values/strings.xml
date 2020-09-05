@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Contact_Author</string>
+    <string name="status_drawer">Đang trong quá trình học tập tại trường thử code project học tập thêm kinh nghiệm cho bản thân</string>
+
+    <string name="rate_dialog_title">Vote app</string>
+    <string name="rate_dialog_message">Nếu bạn thích ứng dụng này, hãy bình chọn giúp mình nhé</string>
+    <string name="rate_dialog_ok">Vote now</string>
+    <string name="rate_dialog_cancel">Nhắc tôi sau</string>
+    <string name="rate_dialog_no">Không, cảm ơn</string>
+</resources>

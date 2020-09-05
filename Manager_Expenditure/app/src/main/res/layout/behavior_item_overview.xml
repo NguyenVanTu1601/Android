@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="@dimen/_22sdp"
+            android:id="@+id/description_item_overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorActionBar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/behavior_name_item_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sức khỏe"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_15ssp"
+                android:textColor="@color/colorWhite"
+                android:layout_marginStart="@dimen/_10sdp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/behavior_sogiaodich_item_overview"
+                    android:layout_weight="4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 giao dịch"
+                    android:textSize="@dimen/_11ssp"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textColor="@color/colorWhite"/>
+                <TextView
+                    android:id="@+id/behavior_money_item_overview"
+                    android:layout_weight="6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 đ"
+                    android:textSize="@dimen/_14ssp"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:gravity="end"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textColor="@color/colorWhite"/>
+            </LinearLayout>
+
+            <com.daimajia.numberprogressbar.NumberProgressBar
+                android:id="@+id/behavior_numberProgessbar_ItemOverview"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20sdp"
+
+                app:progress_unreached_color="#CCCCCC"
+                app:progress_reached_color="#3498DB"
+
+                app:progress_unreached_bar_height="2dp"
+                app:progress_reached_bar_height="4dp"
+
+                app:progress_text_size="10sp"
+                app:progress_text_color="#3498DB"
+                app:progress_text_offset="1dp"
+                app:progress_text_visibility="visible"
+
+                app:progress_max="100"
+                app:progress_current="0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/behavior_date_item_overview"
+                    android:layout_weight="4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tháng 8 2020"
+                    android:textSize="@dimen/_11ssp"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textColor="@color/colorWhite"/>
+                <TextView
+                    android:id="@+id/behavior_tongtien_item_overview"
+                    android:layout_weight="6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 đ"
+                    android:textSize="@dimen/_11ssp"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:gravity="end"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textColor="@color/colorWhite"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/behavior_floating_item_overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorActionBar"
+            android:src="@drawable/ic_save"
+            app:layout_constraintTop_toTopOf="@id/description_item_overview"
+            app:layout_constraintBottom_toTopOf="@id/description_item_overview"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:weightSum="10"
+            app:layout_constraintTop_toBottomOf="@id/description_item_overview">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:padding="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background__icon_category"
+                    android:backgroundTint="#F4CDDA"
+                    android:src="@drawable/ic_rut"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chi phí"
+                    android:textColor="#333333"
+                    android:padding="@dimen/_3sdp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background__icon_category"
+                    android:backgroundTint="#9DEAA7"
+                    android:src="@drawable/ic_giaodich"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Giao dịch"
+                    android:textColor="#333333"
+                    android:padding="@dimen/_3sdp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

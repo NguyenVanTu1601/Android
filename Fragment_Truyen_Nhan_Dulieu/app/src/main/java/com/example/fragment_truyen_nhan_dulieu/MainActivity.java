@@ -21,13 +21,16 @@ public class MainActivity extends AppCompatActivity {
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment fragment = new Fragment();
-                // Truyền dữ liệu
-                Bundle bundle = new Bundle();
-                bundle.putString("hoten", "Nguyễn Văn Tú");
-                fragment.setArguments(bundle);
-
-                //
+//                Fragment fragment = new Fragment();
+//                // Truyền dữ liệu
+//                Bundle bundle = new Bundle();
+//                bundle.putString("hoten", "Nguyễn Văn Tú");
+//                fragment.setArguments(bundle);
+//
+//                //
+//                fragmentTransaction.add(R.id.FrameLayout,fragment);
+//                fragmentTransaction.commit();
+                Fragment fragment = Fragment.newInstance("Nguyễn Văn Tú");
                 fragmentTransaction.add(R.id.FrameLayout,fragment);
                 fragmentTransaction.commit();
             }

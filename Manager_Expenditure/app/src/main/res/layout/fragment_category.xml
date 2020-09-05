@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/fragment_category"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".category.CategoryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_datetime_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorActionBar">
+            <ImageButton
+                android:id="@+id/date_back_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                android:background="@color/colorActionBar"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <ImageButton
+                android:id="@+id/date_preveous_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_forward"
+                android:background="@color/colorActionBar"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/datetime_actionbar_category"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_13sdp"
+                android:text="Date time"
+                android:textSize="@dimen/_13ssp"
+                android:gravity="center"
+                android:drawableEnd="@drawable/ic_down"
+                app:layout_constraintEnd_toStartOf="@id/date_preveous_category"
+                app:layout_constraintStart_toEndOf="@id/date_back_category"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layout_icon_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/text_icon_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Bách hóa"
+                    android:textSize="@dimen/_11ssp" />
+
+                <ImageView
+                    android:src="@drawable/ic_shopping"
+                    android:id="@+id/img_icon_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#2ABEE3"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/background__icon_category" />
+
+                <TextView
+                    android:id="@+id/text_money_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 đ"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_icon_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/text_icon_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Vận chuyển"
+                    android:textSize="@dimen/_11ssp" />
+
+                <ImageView
+                    android:src="@drawable/ic_car"
+                    android:id="@+id/img_icon_4"
+                    android:backgroundTint="#F6F66A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/background__icon_category" />
+
+                <TextView
+                    android:id="@+id/text_money_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 đ"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_icon_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@id/layout_icon_3"
+                app:layout_constraintStart_toEndOf="@id/layout_icon_1"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/text_icon_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Nhà hàng"
+                    android:textSize="@dimen/_11ssp" />
+
+                <ImageView
+                    android:src="@drawable/ic_restaurant"
+                    android:backgroundTint="#3F51B5"
+                    android:id="@+id/img_icon_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/background__icon_category" />
+
+                <TextView
+                    android:id="@+id/text_money_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 đ"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_icon_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@id/layout_icon_4"
+                app:layout_constraintStart_toEndOf="@id/layout_icon_2"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/text_icon_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Giải trí"
+                    android:textSize="@dimen/_11ssp" />
+
+                <ImageView
+                    android:id="@+id/img_icon_3"
+                    android:backgroundTint="#F3B8D1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_phim_category"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/background__icon_category" />
+
+                <TextView
+                    android:id="@+id/text_money_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 đ"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/layout_icon_2"
+                app:layout_constraintStart_toEndOf="@id/layout_icon_5"
+                app:layout_constraintEnd_toStartOf="@id/layout_icon_6"
+                app:layout_constraintBottom_toTopOf="@id/layout_icon_12"
+                android:id="@+id/pieChart"/>
+
+
+
+            <LinearLayout
+                android:id="@+id/layout_icon_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/layout_icon_7"
+                app:layout_constraintEnd_toEndOf="@id/layout_icon_1"
+                app:layout_constraintStart_toStartOf="@id/layout_icon_1"
+                app:layout_constraintTop_toBottomOf="@id/layout_icon_1">
+
+                <TextView
+                    android:id="@+id/text_icon_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Sức khỏe"
+                    android:textSize="@dimen/_11ssp" />
+
+                <ImageView
+                    android:id="@+id/img_icon_5"
+                    android:backgroundTint="#6DF149"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_health_category"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/background__icon_category" />
+
+                <TextView
+                    android:id="@+id/text_money_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 đ"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_icon_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@id/layout_icon_4"
+                app:layout_constraintTop_toBottomOf="@id/layout_icon_4">
+
+                <TextView
+                    android:id="@+id/text_icon_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Qùa tặng"
+                    android:textSize="@dimen/_11ssp" />
+
+                <ImageView
+                    android:src="@drawable/ic_gift_category"
+                    android:backgroundTint="#FBAB55"
+                    android:id="@+id/img_icon_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/background__icon_category" />
+
+                <TextView
+                    android:id="@+id/text_money_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 đ"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_icon_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@id/layout_icon_5"
+                app:layout_constraintStart_toStartOf="@id/layout_icon_5"
+                app:layout_constraintTop_toBottomOf="@id/layout_icon_5"
+                >
+
+                <TextView
+                    android:id="@+id/text_icon_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Gia đình"
+                    android:textSize="@dimen/_11ssp" />
+
+                <ImageView
+                    android:src="@drawable/ic_family_category"
+                    android:id="@+id/img_icon_7"
+                    android:backgroundTint="#E66BC3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/background__icon_category" />
+
+                <TextView
+                    android:id="@+id/text_money_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 đ"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_icon_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@id/layout_icon_6"
+                app:layout_constraintStart_toStartOf="@id/layout_icon_6"
+                app:layout_constraintTop_toBottomOf="@id/layout_icon_6">
+
+                <TextView
+                    android:id="@+id/text_icon_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Mua sắm"
+                    android:textSize="@dimen/_11ssp" />
+
+                <ImageView
+                    android:src="@drawable/ic_shopping_category"
+                    android:id="@+id/img_icon_8"
+                    android:backgroundTint="#C8C8C5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/background__icon_category" />
+
+                <TextView
+                    android:id="@+id/text_money_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 đ"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_icon_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/layout_icon_7"
+                app:layout_constraintTop_toBottomOf="@id/layout_icon_7"
+                app:layout_constraintEnd_toEndOf="@id/layout_icon_7"
+                >
+
+                <TextView
+                    android:id="@+id/text_icon_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="New"
+                    android:textSize="@dimen/_11ssp" />
+
+                <ImageView
+                    android:src="@drawable/ic_favorite_category"
+                    android:id="@+id/img_icon_9"
+                    android:backgroundTint="#97971D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/background__icon_category" />
+
+                <TextView
+                    android:id="@+id/text_money_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 đ"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_icon_10"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/layout_icon_9"
+                app:layout_constraintStart_toEndOf="@id/layout_icon_9"
+                app:layout_constraintEnd_toStartOf="@id/layout_icon_11"
+                app:layout_constraintTop_toTopOf="@id/layout_icon_9">
+
+                <TextView
+                    android:id="@+id/text_icon_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="New"
+                    android:textSize="@dimen/_11ssp" />
+
+                <ImageView
+                    android:src="@drawable/ic_favorite_category"
+                    android:id="@+id/img_icon_10"
+                    android:backgroundTint="#F44336"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/background__icon_category" />
+
+                <TextView
+                    android:id="@+id/text_money_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 đ"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_icon_11"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/layout_icon_10"
+                app:layout_constraintStart_toEndOf="@id/layout_icon_10"
+                app:layout_constraintEnd_toStartOf="@id/layout_icon_12"
+                app:layout_constraintTop_toTopOf="@id/layout_icon_10">
+
+                <TextView
+                    android:id="@+id/text_icon_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="New"
+                    android:textSize="@dimen/_11ssp" />
+
+                <ImageView
+                    android:src="@drawable/ic_favorite_category"
+                    android:id="@+id/img_icon_11"
+                    android:backgroundTint="#3CFFFF07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/background__icon_category" />
+
+                <TextView
+                    android:id="@+id/text_money_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 đ"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_icon_12"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical"
+
+                app:layout_constraintEnd_toEndOf="@id/layout_icon_8"
+                app:layout_constraintStart_toEndOf="@id/layout_icon_11"
+                app:layout_constraintStart_toStartOf="@id/layout_icon_8"
+                app:layout_constraintTop_toBottomOf="@id/layout_icon_8">
+
+                <TextView
+                    android:id="@+id/text_icon_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="New"
+                    android:textSize="@dimen/_11ssp" />
+
+                <ImageView
+                    android:src="@drawable/ic_favorite_category"
+                    android:id="@+id/img_icon_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#ff0"
+                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/background__icon_category" />
+
+                <TextView
+                    android:id="@+id/text_money_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0 đ"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Comment.CommentActivity"
+    android:background="#FFFFFF">
+    <TextView
+        android:id="@+id/noId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comment"
+        android:textSize="@dimen/_25ssp"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/ubuntu_bold"/>
+    <ListView
+        android:id="@+id/listViewComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_above="@+id/layoutComment"
+        android:layout_below="@+id/noId"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_5sdp" />
+    <LinearLayout
+        android:id="@+id/layoutComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_alignParentBottom="true">
+        <EditText
+            android:layout_weight="9"
+            android:id="@+id/textComment"
+            android:layout_width="0dp"
+            android:textSize="@dimen/_10ssp"
+            android:background="@drawable/background_input"
+            android:hint="Bình luận về bức ảnh này nào..."
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_marginStart="@dimen/_2sdp"
+            android:id="@+id/buttonComment"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="@drawable/ic_send"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</RelativeLayout>

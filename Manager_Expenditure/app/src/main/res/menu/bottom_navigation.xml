@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/main_credit"
+        android:icon="@drawable/ic_account"
+        android:title="Tài khoản" />
+
+    <item
+        android:id="@+id/main_category"
+        android:title="Danh mục"
+        android:icon="@drawable/ic_category"/>
+
+    <item
+        android:id="@+id/main_deal"
+        android:title="Giao dịch"
+        android:icon="@drawable/ic_deal"/>
+
+    <item
+        android:id="@+id/main_overview"
+        android:title="Tổng quan"
+        android:icon="@drawable/ic_tongquan"/>
+</menu>

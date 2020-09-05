@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">nCovi_2020</string>
+    <string name="viet_nam">Việt Nam</string>
+    <string name="the_gioi">Thế giới</string>
+    <string name="huong_dan">Hướng dẫn</string>
+    <string name="author">Tác giả</string>
+    <string name="status_drawer">Sinh viên năm 4 Học viện Công nghệ Bưu chính viễn thông, code project học tập thêm kinh nghiệm cho bản thân</string>
+    <string name="rate_dialog_title">Vote app</string>
+    <string name="rate_dialog_message">Nếu bạn thích ứng dụng này, hãy bình chọn giúp mình nhé</string>
+    <string name="rate_dialog_ok">Vote now</string>
+    <string name="rate_dialog_cancel">Nhắc tôi sau</string>
+    <string name="rate_dialog_no">Không, cảm ơn</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

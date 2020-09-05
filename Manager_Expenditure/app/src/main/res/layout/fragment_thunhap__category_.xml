@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".category.Thunhap_Category_Fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_icon_edit_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_icon_edit_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Tiền lương"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+                android:src="@drawable/ic_attach_money"
+                android:id="@+id/img_icon_edit_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#0E633C"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/background__icon_category" />
+
+            <TextView
+                android:id="@+id/text_money_edit_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0 đ"
+                android:textColor="#0E633C"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="invisible"
+            android:id="@+id/layout_icon_edit_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_icon_edit_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Vận chuyển"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+                android:src="@drawable/ic_car"
+                android:id="@+id/img_icon_edit_4"
+                android:backgroundTint="#F6F66A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/background__icon_category" />
+
+            <TextView
+                android:id="@+id/text_money_edit_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0 đ"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_icon_edit_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/layout_icon_edit_3"
+            app:layout_constraintStart_toEndOf="@id/layout_icon_edit_1"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_icon_edit_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Tiền thưởng"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+                android:src="@drawable/ic_restaurant"
+                android:backgroundTint="#DF88B1"
+                android:id="@+id/img_icon_edit_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/background__icon_category" />
+
+            <TextView
+                android:id="@+id/text_money_edit_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0 đ"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_icon_edit_3"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/layout_icon_edit_4"
+            app:layout_constraintStart_toEndOf="@id/layout_icon_edit_2"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_icon_edit_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Giải trí"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+
+                android:id="@+id/img_icon_edit_3"
+                android:backgroundTint="#F3B8D1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_phim_category"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/background__icon_category" />
+
+            <TextView
+                android:id="@+id/text_money_edit_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0 đ"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/PieCharThuNhapCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20sdp"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/layout_icon_edit_2"
+            app:layout_constraintStart_toEndOf="@id/layout_icon_edit_5"
+            app:layout_constraintEnd_toStartOf="@id/layout_icon_edit_6"
+            app:layout_constraintBottom_toTopOf="@id/layout_icon_edit_12"/>
+
+        <LinearLayout
+            android:id="@+id/layout_icon_edit_5"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/layout_icon_edit_7"
+            app:layout_constraintEnd_toEndOf="@id/layout_icon_edit_1"
+            app:layout_constraintStart_toStartOf="@id/layout_icon_edit_1"
+            app:layout_constraintTop_toBottomOf="@id/layout_icon_edit_1">
+
+            <TextView
+                android:id="@+id/text_icon_edit_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Sức khỏe"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+
+                android:id="@+id/img_icon_edit_5"
+                android:backgroundTint="#6DF149"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_health_category"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/background__icon_category" />
+
+            <TextView
+                android:id="@+id/text_money_edit_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0 đ"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_icon_edit_6"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@id/layout_icon_edit_4"
+            app:layout_constraintTop_toBottomOf="@id/layout_icon_edit_4">
+
+            <TextView
+                android:id="@+id/text_icon_edit_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Qùa tặng"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+
+                android:src="@drawable/ic_gift_category"
+                android:backgroundTint="#FBAB55"
+                android:id="@+id/img_icon_edit_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/background__icon_category" />
+
+            <TextView
+                android:id="@+id/text_money_edit_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0 đ"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_icon_edit_7"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@id/layout_icon_edit_5"
+            app:layout_constraintStart_toStartOf="@id/layout_icon_edit_5"
+            app:layout_constraintTop_toBottomOf="@id/layout_icon_edit_5"
+            >
+
+            <TextView
+                android:id="@+id/text_icon_edit_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Gia đình"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+                android:src="@drawable/ic_family_category"
+                android:id="@+id/img_icon_edit_7"
+                android:backgroundTint="#E66BC3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/background__icon_category" />
+
+            <TextView
+                android:id="@+id/text_money_edit_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0 đ"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="invisible"
+            android:id="@+id/layout_icon_edit_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@id/layout_icon_edit_6"
+            app:layout_constraintStart_toStartOf="@id/layout_icon_edit_6"
+            app:layout_constraintTop_toBottomOf="@id/layout_icon_edit_6">
+
+            <TextView
+                android:id="@+id/text_icon_edit_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Mua sắm"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+
+                android:src="@drawable/ic_shopping_category"
+                android:id="@+id/img_icon_edit_8"
+                android:backgroundTint="#C8C8C5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/background__icon_category" />
+
+            <TextView
+                android:id="@+id/text_money_edit_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0 đ"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_icon_edit_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/layout_icon_edit_7"
+            app:layout_constraintTop_toBottomOf="@id/layout_icon_edit_7"
+            app:layout_constraintEnd_toEndOf="@id/layout_icon_edit_7"
+            >
+
+            <TextView
+                android:id="@+id/text_icon_edit_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="New"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+                android:src="@drawable/ic_favorite_category"
+                android:id="@+id/img_icon_edit_9"
+                android:backgroundTint="#97971D"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/background__icon_category" />
+
+            <TextView
+                android:id="@+id/text_money_edit_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0 đ"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_icon_edit_10"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/layout_icon_edit_9"
+            app:layout_constraintStart_toEndOf="@id/layout_icon_edit_9"
+            app:layout_constraintEnd_toStartOf="@id/layout_icon_edit_11"
+            app:layout_constraintTop_toTopOf="@id/layout_icon_edit_9">
+
+            <TextView
+                android:id="@+id/text_icon_edit_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="New"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+                android:src="@drawable/ic_favorite_category"
+                android:id="@+id/img_icon_edit_10"
+                android:backgroundTint="#F44336"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/background__icon_category" />
+
+            <TextView
+                android:id="@+id/text_money_edit_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0 đ"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_icon_edit_11"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/layout_icon_edit_10"
+            app:layout_constraintStart_toEndOf="@id/layout_icon_edit_10"
+            app:layout_constraintEnd_toStartOf="@id/layout_icon_edit_12"
+            app:layout_constraintTop_toTopOf="@id/layout_icon_edit_10">
+
+            <TextView
+                android:id="@+id/text_icon_edit_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="New"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+                android:src="@drawable/ic_favorite_category"
+                android:id="@+id/img_icon_edit_11"
+                android:backgroundTint="#3CFFFF07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/background__icon_category" />
+
+            <TextView
+                android:id="@+id/text_money_edit_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0 đ"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_icon_edit_12"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:orientation="vertical"
+
+            app:layout_constraintEnd_toEndOf="@id/layout_icon_edit_8"
+            app:layout_constraintStart_toEndOf="@id/layout_icon_edit_11"
+            app:layout_constraintStart_toStartOf="@id/layout_icon_edit_8"
+            app:layout_constraintTop_toBottomOf="@id/layout_icon_edit_8">
+
+            <TextView
+                android:id="@+id/text_icon_edit_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="New"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+                android:src="@drawable/ic_favorite_category"
+                android:id="@+id/img_icon_edit_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#ff0"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/background__icon_category" />
+
+            <TextView
+                android:id="@+id/text_money_edit_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0 đ"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
