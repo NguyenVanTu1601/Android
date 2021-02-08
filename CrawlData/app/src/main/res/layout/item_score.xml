@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginStart="@dimen/_16sdp"
+    android:layout_marginEnd="@dimen/_16sdp"
+    android:background="@drawable/background_dialog">
+
+    <LinearLayout
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_weight="7"
+            android:id="@+id/itemNameScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_13ssp"
+            android:padding="@dimen/_5sdp"
+            android:textColor="#C62A88"
+            android:text="Tên môn học" />
+
+        <TextView
+            android:id="@+id/tin_score"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10ssp"
+            android:text="Số tín chỉ"
+            android:textColor="#03C4A1"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/d10_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Điểm hệ 10"
+            android:textColor="#590995"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_10ssp"/>
+        <TextView
+            android:id="@+id/d4_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Điểm hệ 4"
+            android:textColor="#150485"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:textSize="@dimen/_10ssp"/>
+    </LinearLayout>
+
+</LinearLayout>

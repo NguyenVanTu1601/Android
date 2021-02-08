@@ -9,6 +9,7 @@ import android.widget.Button;
 
 /** Chua biết lý do tại sao chạy trên máy ảo oke mà máy thật k chạy
  *  Phần trong file style ko cần , có thể xóa, do thêm vào nó cũng vẫn thế :((
+ *  Lý do đã phát hiện :D do đt cùi quá nên vậy
  */
 public class MainActivity extends AppCompatActivity {
     Button btnMain;

@@ -9,6 +9,7 @@
         <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
         <item name="android:windowContentTransitions">true</item>
     </style>
+
     <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">@anim/anim_enter</item>
         <item name="android:activityOpenExitAnimation">@anim/anim_exit</item>

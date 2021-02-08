@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScorePackage.Score_Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/colorPrimaryDark">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Điểm các môn"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/_20ssp"
+                android:textColor="@color/colorWhite" />
+            <TextView
+                android:id="@+id/reloadScore"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Reload"
+                android:layout_gravity="right"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_10ssp"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_16sdp">
+            <EditText
+                android:id="@+id/edtSearch"
+                android:layout_weight="9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Search môn học"
+                android:textSize="@dimen/_13ssp"
+                android:padding="@dimen/_5sdp"/>
+            <ImageView
+                android:id="@+id/imgSearch"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:src="@drawable/ic_baseline_search_24"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerScore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</FrameLayout>

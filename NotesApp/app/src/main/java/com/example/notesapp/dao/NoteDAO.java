@@ -13,7 +13,7 @@ import java.util.List;
 @Dao
 public interface NoteDAO {
 
-    @Query("SELECT * FROM notes ORDER BY id DESC")
+    @Query("SELECT * FROM notes ORDER BY id DESC") // notes là tên table được viết trong class entities Note
     List<Note> gettAllNotes();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

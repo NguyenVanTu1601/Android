@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/item_test_tenmon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên môn"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_15ssp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <LinearLayout
+            android:layout_weight="6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/item_test_ngaythi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ngày thi"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/item_test_giothi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giờ thi"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/colorPrimary"/>
+            <TextView
+                android:id="@+id/item_test_phongthi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phòng thi"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/colorPrimary"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="@dimen/_5sdp">
+            <TextView
+                android:id="@+id/item_test_thoigian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thời gian"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/colorPrimary"/>
+            <TextView
+                android:id="@+id/item_test_hinhthuc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hình thức"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/colorPrimary"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

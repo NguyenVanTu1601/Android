@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultFragment"
+    android:background="@color/colorPrimaryDark">
+
+
+    <TextView
+        android:id="@+id/result_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Result"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/result_progess"
+        android:layout_width="64dp"
+        android:progress="100"
+        android:layout_height="64dp"
+        android:progressDrawable="@drawable/circler_progress"
+        app:layout_constraintTop_toBottomOf="@id/result_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/result_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100%"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="@id/result_progess"
+        app:layout_constraintStart_toStartOf="@id/result_progess"
+        app:layout_constraintEnd_toEndOf="@id/result_progess"
+        app:layout_constraintBottom_toBottomOf="@id/result_progess"/>
+    <TextView
+        android:layout_marginStart="20dp"
+        android:id="@+id/result_correct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correct Answers"
+        android:textSize="20sp"
+        android:textColor="@color/colorLightText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_progess"
+        android:layout_marginTop="40dp"/>
+    <TextView
+        android:id="@+id/result_wrong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Wrong Answers"
+        android:textSize="20sp"
+        android:textColor="@color/colorLightText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_correct"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/result_missed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question Missed"
+        android:textSize="20sp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/colorLightText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_wrong"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/result_correct_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/result_correct"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="N/A"
+        android:textSize="20sp"
+        android:textColor="@color/colorLightText"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/result_wrong_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/result_wrong"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="N/A"
+        android:textSize="20sp"
+        android:textColor="@color/colorLightText"
+        android:layout_marginEnd="20dp"/>
+    <TextView
+        android:id="@+id/result_misses_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/result_missed"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="N/A"
+        android:textSize="20sp"
+        android:textColor="@color/colorLightText"
+        android:layout_marginEnd="20dp"/>
+    <Button
+        android:id="@+id/result_home_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="32dp"
+        android:text="Go to home"
+        android:textAllCaps="false"
+        android:background="@drawable/primary_btn_bg"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

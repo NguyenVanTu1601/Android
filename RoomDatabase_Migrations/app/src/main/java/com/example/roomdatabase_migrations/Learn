@@ -1,0 +1,43 @@
+- Mục đích của migration là đồng bộ csdl cũ và mới sau khi đã cập nhật lại thuộc tính của bảng
+- Nói chung, sau khi đã update version thì việc tiếp theo là migration. Có 2 cách ứng với 2 trường
+hợp khác nhau
+- Trường hợp 1 : Schema ko có sự thay đổi gì cả (không có thêm cột,...)
+chúng ta chỉ cần đinh nghĩa một empty migration  :
+
+@Database(entities = {User.class}, version = 2)
+public abstract class UsersDatabase extends RoomDatabase {
+…
+static final Migration MIGRATION_1_2 = new Migration(1, 2) {
+    @Override
+    public void migrate(SupportSQLiteDatabase database) {
+        // Since we didn't alter the table, there's nothing else to do here.
+    }
+};
+…
+database =  Room.databaseBuilder(context.getApplicationContext(),
+        UsersDatabase.class, "Sample.db")
+        .addMigrations(MIGRATION_1_2)
+        .build();
+
+- Trường hợp 2 : Schema có thêm các thuộc tính mới của bảng
+Nếu schema của database thay đổi, ví dụ chúng ta thêm một column last_update
+vào bảng users bằng cách thêm thuộc tính vào class User. Trong class UserDatabase
+chúng ta cần thay đổi như sau:
+
++ Tăng version lên 3:
+@Database(entities = {User.class}, version = 3)
+public abstract class UsersDatabase extends RoomDatabase
++ Định nghĩa migration từ version 2 lên version 3:
+
+static final Migration MIGRATION_2_3 = new Migration(2, 3) {
+    @Override
+    public void migrate(SupportSQLiteDatabase database) {
+        database.execSQL("ALTER TABLE users "
+                + " ADD COLUMN last_update INTEGER");
+    }
+};
+ + Thêm migration ở trên vào database builder:
+database = Room.databaseBuilder(context.getApplicationContext(),
+        UsersDatabase.class, "Sample.db")
+        .addMigrations(MIGRATION_1_2, MIGRATION_2_3)
+        .build();

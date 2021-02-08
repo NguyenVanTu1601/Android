@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_118sdp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/titlePage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_22sdp"
+            android:text="Create New Does"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="@dimen/_28ssp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="#131E69" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/bgitemdoes"
+        android:paddingTop="@dimen/_22sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_22sdp"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:layout_marginTop="-40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/addtitle"
+                android:textSize="@dimen/_18ssp"
+                android:text="Add Title"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/addTitleDoes"
+                android:hint="What you do?"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#B5B5B5"
+                android:background="@drawable/bginputtask"
+                android:textColor="@color/colorPrimaryDark"
+                android:padding="@dimen/_5sdp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/adddesc"
+                android:textSize="@dimen/_18ssp"
+                android:text="Description"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/addDescDoes"
+                android:hint="How to?"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#B5B5B5"
+                android:background="@drawable/bginputtask"
+                android:textColor="@color/colorPrimaryDark"
+                android:padding="@dimen/_5sdp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/adddate"
+                android:textSize="@dimen/_18ssp"
+                android:text="Date"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/addDateDoes"
+                android:hint="When will?"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#B5B5B5"
+                android:background="@drawable/bginputtask"
+                android:textColor="@color/colorPrimaryDark"
+                android:padding="@dimen/_5sdp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSaveTask"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Create Now"
+        android:textColor="#FFF"
+        android:textAllCaps="false"
+        android:background="@drawable/bgbtncreate"
+        android:textSize="@dimen/_18ssp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"/>
+
+    <Button
+        android:id="@+id/btnCancle"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="Cancel"
+        android:textColor="#AFAFAF"
+        android:textAllCaps="false"
+        android:background="@drawable/bgbtncancel"
+        android:textSize="@dimen/_18ssp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"/>
+</LinearLayout>

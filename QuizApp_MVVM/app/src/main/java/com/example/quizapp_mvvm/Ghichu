@@ -1,0 +1,13 @@
+- Firebase có 2 loại database : Cloud FireStore (dùng trong project này) và RealtimeDatabase
+- Tạo xml nav_graph dùng để tạo liên kết giữa các fragment
+- Quan sát file nav_graph sẽ thấy
+ + Với startFragment :
+      app:popUpToInclusive="true" - khởi tạo nút back hoạt động để khi back có thể back về
+      app:popUpTo="@id/startFragment" - back từ trang liền kề về startFragment
+      app:enterAnim="@anim/fade_in" - tạo animation khi vào fragment
+      app:exitAnim="@anim/fade_out" - tạo animation khi ra khỏi fragment
+- Trong file activity StartFragment : Để chuyển sang fragment khác dùng NavController
+    + navControler.navigate (id fragment sẽ chuyển tới )
+
+- Trong adapter có thể băt được xem đã click vào chỗ nào trên recyclerview thông qua getAdapterPosition(), khá hay và tiện lợi
+- Các quiz trên firebase cần kiểm tra có phải public ko thì mới cho đọc về , ktra trong file FirebaseRepossitory

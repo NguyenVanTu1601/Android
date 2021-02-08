@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "486987411882",
+    "firebase_url": "https://mydoesapp-d9ac7.firebaseio.com",
+    "project_id": "mydoesapp-d9ac7",
+    "storage_bucket": "mydoesapp-d9ac7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486987411882:android:4a1372cb21bc28e7d87bd3",
+        "android_client_info": {
+          "package_name": "com.example.mydoesapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486987411882-t6h7utqf9co4jri7tvk8midv6kepvf57.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPEAuoqj_-12-2ndPhEBTGsg6MN_TVtq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486987411882-t6h7utqf9co4jri7tvk8midv6kepvf57.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

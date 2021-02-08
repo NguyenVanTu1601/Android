@@ -36,6 +36,7 @@ import com.google.android.material.navigation.NavigationView;
  * androidx.appcompat.widget.Toolbar sẽ thay thế cho v7-ToolBar
  *
  * Chú ý : android:layout_gravity="start" trong NavigationView của activity.xml có tác dụng đẩy các view vào trong, và cần thì kéo ra
+ * Drawer không đóng mở được 90% do đặt nó vào trong layout nào đó, chỉ cần đưa nó ra khỏi layout là oke :))
  */
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     DrawerLayout drawerLayout;

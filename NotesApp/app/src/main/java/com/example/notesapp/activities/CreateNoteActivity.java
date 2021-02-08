@@ -157,7 +157,7 @@ public class CreateNoteActivity extends AppCompatActivity {
             Toast.makeText(this, "Note title không được để trống!", Toast.LENGTH_SHORT).show();
             return;
         }
-        if(TextUtils.isEmpty(NoteText) || TextUtils.isEmpty(NoteSubtitle) ){
+        if(TextUtils.isEmpty(NoteText) && TextUtils.isEmpty(NoteSubtitle) ){
             Toast.makeText(this, "Vui lòng nhập đủ thông tin cho note", Toast.LENGTH_SHORT).show();
             return;
         }

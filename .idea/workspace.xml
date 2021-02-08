@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="85ea7384-3f91-487e-bdbe-e802f44a6dca" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Animation_Activity/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Animation_Activity/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Animation_in_Intent/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Animation_in_Intent/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Manager_Expenditure/app/src/main/res/drawable/bg_behavior_credit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_LinearLayout/app/src/main/java/com/example/test/UIActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test_LinearLayout/app/src/main/res/layout/activity_u_i.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/java/com/example/android_game/GameActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/java/com/example/android_game/StartActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable-anydpi/ic_action_play.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable-hdpi/ic_action_play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable-mdpi/ic_action_play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable-xhdpi/ic_action_play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable-xxhdpi/ic_action_play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/bronze.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/diamond.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/enemy1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/enemy2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/food.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/gold.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/ic_pause_circle_outline_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/ic_play.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/paused.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/player1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/player1a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/player1b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/player2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/player2a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/player2b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/player3a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/player3b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/player4a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/player4b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/silver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/drawable/spimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/layout/activity_game.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Android_Game/app/src/main/res/layout/activity_start.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Animation_Activity/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Animation_Activity/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Animation_in_Intent/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Animation_in_Intent/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Animation_in_Intent/app/src/main/java/com/example/animation_in_intent/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Animation_in_Intent/app/src/main/java/com/example/animation_in_intent/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Animation_in_Intent/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Animation_in_Intent/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data_Binding/app/src/main/java/com/example/data_binding/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Data_Binding/app/src/main/java/com/example/data_binding/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data_Binding/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Data_Binding/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data_Binding/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Data_Binding/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Manager_Expenditure/app/src/main/res/layout/behavier_credit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Manager_Expenditure/app/src/main/res/layout/behavier_credit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotesApp/app/src/main/java/com/example/notesapp/activities/CreateNoteActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/NotesApp/app/src/main/java/com/example/notesapp/activities/CreateNoteActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/androidTest/java/com/example/seekbar_custom/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/java/com/example/seekbar_custom/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/app/src/test/java/com/example/seekbar_custom/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeekBar_Custom/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test_LinearLayout/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test_LinearLayout/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test_LinearLayout/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Test_LinearLayout/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test_LinearLayout/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Test_LinearLayout/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hYHcQEZifEN5i0ERFqQSQKX4wu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="85ea7384-3f91-487e-bdbe-e802f44a6dca" name="Default Changelist" comment="" />
+      <created>1600181184440</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600181184440</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1600181219883">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600181219883" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1600181197582">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1600181197582" />
+  </component>
+</project>

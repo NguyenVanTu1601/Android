@@ -13,6 +13,7 @@ import com.example.data_binding.databinding.ActivityMainBinding;
 
 /**
  * Là một dạng như SQLite nhưng ngại chưa muốn học :))
+ * À không như SQLite đâu, nó hay hơn nhiều, sẽ học trong 1 vài ngày tới khi tìm được nguồn phù hợp
  */
 public class MainActivity extends AppCompatActivity {
 

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_info"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/_10sdp"
+    android:background="@drawable/background_dialog">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_weight="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13ssp"
+                android:text="Mã sinh viên"/>
+            <TextView
+                android:id="@+id/msv_info"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="B17DCCN642"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginStart="@dimen/_5sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13ssp"
+                android:text="Tên sinh viên"/>
+            <TextView
+                android:id="@+id/tensv_info"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="B17DCCN642"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginStart="@dimen/_5sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13ssp"
+                android:text="Giới tính"/>
+            <TextView
+                android:id="@+id/gioitinh_info"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="B17DCCN642"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginStart="@dimen/_5sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13ssp"
+                android:text="Lớp"/>
+            <TextView
+                android:id="@+id/lop_info"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="B17DCCN642"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginStart="@dimen/_5sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13ssp"
+                android:text="Ngành"/>
+            <TextView
+                android:id="@+id/nganh_info"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="B17DCCN642"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginStart="@dimen/_5sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13ssp"
+                android:text="Khoa"/>
+            <TextView
+                android:id="@+id/khoa_info"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="B17DCCN642"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginStart="@dimen/_5sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13ssp"
+                android:text="Hệ đào tạo"/>
+            <TextView
+                android:id="@+id/he_info"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="B17DCCN642"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginStart="@dimen/_5sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13ssp"
+                android:text="Khóa học"/>
+            <TextView
+                android:id="@+id/khoahoc_info"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="B17DCCN642"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginStart="@dimen/_5sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13ssp"
+                android:text="Cố vấn"/>
+            <TextView
+                android:id="@+id/covan_info"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="B17DCCN642"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginStart="@dimen/_5sdp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

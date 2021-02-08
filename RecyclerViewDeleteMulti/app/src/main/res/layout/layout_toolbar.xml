@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/toolBar"
+    android:background="@color/purple_500"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 item selected"
+            android:id="@+id/counter_text"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>
