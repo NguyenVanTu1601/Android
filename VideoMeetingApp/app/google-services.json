@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "687467919045",
+    "project_id": "videomeeting-ea660",
+    "storage_bucket": "videomeeting-ea660.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687467919045:android:9b4ee8007ec8377b00e2ac",
+        "android_client_info": {
+          "package_name": "com.example.videomeetingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687467919045-7a3gna42mvojood603hi7evi2nev2usd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr6ThXFLTsfrrpPQuGpF5LM4jpW1cDc_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687467919045-7a3gna42mvojood603hi7evi2nev2usd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,12 @@
+// Build.gradle
+implementation 'com.vanniktech:emoji-google:0.7.0'
+
+// AndroidManifest :
+   application
+       android:name=".EmojiApplication"
+       ...
+       activity android:name=".MainActivity"
+           android:windowSoftInputMode="adjustResize"
+           ...
+       /activity
+   /application

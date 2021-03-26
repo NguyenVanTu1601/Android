@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgapp"
+    android:orientation="vertical"
+    tools:context=".BossActivity">
+
+    <TextView
+        android:id="@+id/textScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="Checkpoint Time"
+        android:textColor="#FFF"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:id="@+id/bigBoss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/icboss" />
+
+    <TextView
+        android:id="@+id/textQuestion"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="Well Done! Ready for Boss?"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bgbtn"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/colorText"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/textBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Back to Home"
+        android:textColor="#FFF"
+        android:textSize="20sp" />
+</LinearLayout>

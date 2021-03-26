@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Android_Bai3_Layout</string>
+    <string-array name="country_array">
+        <item>Việt Nam</item>
+        <item>Lào</item>
+        <item>Campuchia</item>
+    </string-array>
+
+    <string-array name="university_array">
+        <item>Ptit</item>
+        <item>BKA</item>
+        <item>ĐHQG</item>
+    </string-array>
+
+    <string-array name="option_Calculator">
+        <item>+</item>
+        <item>-</item>
+        <item>*</item>
+        <item>/</item>
+    </string-array>
+</resources>

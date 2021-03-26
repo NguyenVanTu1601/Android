@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 // Long click vào tên sẽ hiện thông tin để delete
@@ -86,6 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
             count--;
             updateCounter(count);
         }
+        Toast.makeText(MainActivity.this, "clicked " + position, Toast.LENGTH_SHORT).show();
     }
 
     public void updateCounter(int counter){

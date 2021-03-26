@@ -1,0 +1,67 @@
+Feature of app
+- Login/Signup
+- Quiz with multipla categories
+- Spin wheel
+- Leaderboards
+- Wallet system
+- User profile
+- Invite friends
+
+--------------------------------------------------------
+1. Build UI
+2. Build Bottom Navigation
+    + Sử dụng thư viện ngoài
+    + Khá là hay, nhưng nếu k thích thì xem lại project của nCovi2020
+    + https://github.com/ibrahimsn98/SmoothBottomBar
+3. Dựng UI cho Home
+    + Sử dụng viewBinding
+    + Có RecyclerView cho danh sách các lựa chọn loại câu hỏi
+    + Sử dụng card view để hiển thị các item trong recycler, chú ý chỉnh màu cardview = cardviewbackgroundcolor...
+    + Viết trong MainActivty
+4.Chỉnh màu chữ cho toolBar thành màu trắng :
+    + custom lại 1 style trong themes
+    + thêm style đó vào toolBar trong thuộc tính apptheme
+5. Tạo activity Result và activityQuiz
+6. Tạo fragment chứa rank , phát hiện recyclerView có 1 thuộc tính hay để test thằng giao diện là
+    listitem = "@layout/layout chứa item"
+7. Create account using Firebase
+    + Xem phần hướng dẫn của firebase trong android studio -> xem Authentication -> Athen using a custom authen ...
+8. Lưu trữ thông tin người dùng lên FireStore sau khi tạo tài khoản tại SignUp
+    + Tham khảo document : https://firebase.google.com/docs/firestore/manage-data/add-data
+    + Nếu gặp lỗi cannot fit requested .. a signle dex file ..
+    -> fix = cách thêm vào build.gradle : multiDexEnabled true
+    + Sử dụng thêm progressDialog
+9. Load quiz from database
+    + Cái này là load các loại câu hỏi vào trong MainActivity thôi chứ chưa phải load các câu hỏi
+    + Sử dụng DocumentSnapshot để đọc 1 danh sách các loại câu hỏi từ nhánh categories trên FirebaseFireStore
+    + Chú ý lớp CategoryModel phải có thuộc tính name, image trùng tên với trên database vd categoryName trong model thì trên firestore cũng
+    phải là categoryName để chứa tên. Hoặc gọi thẳng tên nó vào như đã làm
+    + Sử dụng glide để load ảnh theo đường dẫn từ firestore
+10. Tạo class WithdrawRequest và xử lý trong WalletFragment
+    -> Mục đích là xử lý gửi yêu cầu nhận thêm coins hay s ý
+11. Xử lý trong quizActivity để phát câu hỏi và xử lý trả lời
+    + Chú ý cách thay đổi background cho một textView trong fun checkAnswer()
+    + Xử lý đếm thời gian = CountDownTimer
+    + Xử lý swichcase nhưng chưa hiểu chỗ case option1->4 sao chỉ cần viết 1 cái
+    + Xử lý đọc danh sách câu hỏi từ database -> chú ý để cast dữ liệu thông qua toObject thì Object đó phải có 1 contructor ko tham số
+    + Xử lý số coins sau khi trả lời câu hỏi bằng cách thêm 1 thuộc tính mới update
+
+
+    => Các xử lý liên quan đến FireStore
+    + up dữ liệu lên
+    + lấy 1 document dữ liệu từ collection
+    + lấy toàn bộ dữ liệu của 1 collection
+    + cập nhật dữ liệu
+    + xóa dữ liệu
+    + thêm 1 thuộc tính
+12. Vẽ vòng quay spiner :
+    + khi run app gặp lỗi : trying to draw too large(135851184bytes) bitmap.
+    -> Việc cần làm là thêm thẻ android:hardwareAccelerated="false" trong manifest và trong activity chứa spiner của manifest
+    -> Chỉ thêm vào activity cần nó thôi (spinerActivity) chứ nếu thêm ra chỗ tổng quan nó sẽ gây mất hình bo tròn cho cardview
+    + lúc quay xong vẫn bị lỗi vòng quay mà chưa biết tại sao, có thể do api cũ quá
+    + đồng thời vòng quay mất luôn cái mũi tên r còn đâu -,-
+
+    -> Vòng spiner đang bị lỗi mất cái ô tròn chưa mũi tên. Ý tưởng mới là cho các vòng điểm đứng im còn cho cái mũi tên quay tròn
+    Tuy nhiên chưa biết xử lý nó trỏ vào text nào như thế nào
+
+13. Sử dụng dexter xin quyền ghi file, để ghi ảnh - cái này k liên quan lắm nhưng test thử thôi - nằm trong CategoryAdapter

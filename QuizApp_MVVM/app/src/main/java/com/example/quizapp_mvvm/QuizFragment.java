@@ -50,6 +50,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     }
 
     /**
+     *
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *

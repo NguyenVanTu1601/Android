@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PhotoEditingtApp</string>
+    <string name="text_title">Photo Editer</string>
+    <string name="text_description">All-in-One-Editer</string>
+</resources>

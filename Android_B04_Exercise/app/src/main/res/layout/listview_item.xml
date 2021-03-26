@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/lineItem"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="5dp"
+    android:weightSum="10">
+
+
+    <ImageView
+        android:layout_weight="1"
+        android:id="@+id/img_item"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/female"/>
+    <TextView
+        android:layout_weight="3"
+        android:id="@+id/manv_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NV01"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_weight="5"
+        android:id="@+id/tennv_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nguyễn Văn Tú"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="center"/>
+    <CheckBox
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:id="@+id/check_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"/>
+</LinearLayout>

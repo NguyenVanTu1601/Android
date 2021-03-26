@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutNavigation"
+        android:translationX="-280dp"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="280dp"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/userimage"
+            android:layout_height="120dp"
+            app:cardCornerRadius="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_width="120dp">
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/image6"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/username"
+            android:text="Tú Nguyễn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginTop="14dp"/>
+
+        <TextView
+            android:id="@+id/country"
+            android:text="Việt Nam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:textColor="#FFf"
+            />
+
+        <TextView
+            android:id="@+id/explore"
+            android:gravity="left"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="44dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:textSize="22sp"
+            android:textStyle="normal"
+            android:textAllCaps="false"
+            android:text="Explore"/>
+        <TextView
+            android:id="@+id/addones"
+            android:gravity="left"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="44dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4B577B"
+            android:textSize="22sp"
+
+            android:textStyle="normal"
+            android:textAllCaps="false"
+            android:text="Addone"/>
+
+        <TextView
+            android:id="@+id/messages"
+            android:gravity="left"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="44dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4B577B"
+            android:textSize="22sp"
+            android:textStyle="normal"
+            android:textAllCaps="false"
+            android:text="Messages"/>
+        <TextView
+            android:id="@+id/settings"
+            android:gravity="left"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="44dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4B577B"
+            android:textSize="22sp"
+            android:textStyle="normal"
+            android:textAllCaps="false"
+            android:text="Settings"/>
+        <TextView
+            android:id="@+id/signout"
+            android:gravity="left"
+            android:layout_marginTop="55dp"
+            android:layout_marginStart="44dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4B577B"
+            android:textSize="22sp"
+            android:textStyle="normal"
+            android:textAllCaps="false"
+            android:text="Sign Out"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutContent"
+        android:translationX="-280dp"
+        android:layout_width="416dp"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/user_image_home"
+            android:layout_height="80dp"
+            app:cardCornerRadius="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_width="80dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="30dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/image6" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/user_name_home"
+            android:text="Tú Nguyễn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#181C34"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:gravity="left"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/user_image_home"/>
+
+        <TextView
+            android:id="@+id/country_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name_home"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/user_image_home"
+            android:gravity="left"
+            android:text="Việt Nam"
+            android:textColor="#181C34"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/explore_home"
+            android:text="Explore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#181C34"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:gravity="left"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_below="@+id/user_image_home"/>
+
+        <TextView
+            android:id="@+id/solve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="left"
+            android:text="Solving your problem"
+            android:textColor="#181C34"
+            android:textSize="16sp"
+            android:layout_marginStart="32dp"
+            android:layout_below="@id/explore_home"/>
+
+        <ImageView
+            android:id="@+id/icon_fb"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/solve"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/facebook_logo_icon_181652"/>
+
+        <TextView
+            android:id="@+id/titleFB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_fb"
+            android:layout_alignStart="@+id/icon_fb"
+            android:layout_alignEnd="@+id/icon_fb"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="11dp"
+            android:text="Facebook"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <ImageView
+            android:id="@+id/icon_twiter"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/solve"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/twitter_logo_icon_181645" />
+
+        <TextView
+            android:id="@+id/titleTW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_twiter"
+            android:layout_alignStart="@+id/icon_insta"
+            android:layout_alignEnd="@+id/icon_insta"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="2dp"
+            android:text="Twitter"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <ImageView
+            android:id="@+id/icon_insta"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/solve"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="50dp"
+            android:layout_toStartOf="@+id/icon_twiter"
+            android:layout_toEndOf="@+id/icon_fb"
+            android:src="@drawable/instagram_ig_logo_icon_181651" />
+
+        <TextView
+            android:id="@+id/titleInsta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_insta"
+            android:text="Instagram"
+            android:layout_toEndOf="@id/icon_insta"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <ImageView
+            android:id="@+id/icon_email"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/email_mail_icon_181653"
+            android:layout_below="@id/titleFB"
+            />
+        <TextView
+            android:id="@+id/titleEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/icon_email"
+            android:layout_alignEnd="@+id/icon_email"
+            android:layout_below="@id/icon_email"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="11dp"
+            android:text="Email"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/addOne"
+            android:text="Add One"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#181C34"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:gravity="left"
+            android:layout_marginTop="36dp"
+            android:layout_marginStart="32dp"
+            android:layout_below="@id/titleEmail"/>
+
+        <TextView
+            android:id="@+id/plugin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="left"
+            android:text="Plugins for call faster"
+            android:textColor="#181C34"
+            android:textSize="16sp"
+            android:layout_marginStart="32dp"
+            android:layout_below="@id/addOne"/>
+
+        <ImageView
+            android:id="@+id/icon_skype"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/skype_logo_icon_181646"
+            android:layout_below="@id/plugin"
+            />
+        <TextView
+            android:id="@+id/titleSkyper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_skype"
+            android:text="Skype"
+            android:layout_marginTop="4dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="48dp"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <ImageView
+            android:id="@+id/icon_whatapp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/icon_skype"
+            android:src="@drawable/whatsapp_logo_icon_181644"
+            android:layout_below="@id/plugin" />
+
+        <TextView
+            android:id="@+id/titleWhatapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_whatapp"
+            android:layout_marginStart="66dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/icon_skype"
+            android:text="Whatsapp"
+            android:textColor="@color/colorPrimaryDark" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,4 @@
+Phần layout cho navigation drawer là LinearLayout
+Phần layout cho activity chính là RelativeLayout với độ rộng = 416dp, nếu để match_paren nó sẽ bị trôi dính vào với nhau
++ Chưa thử với ContrainsLayout, nếu dùng constrain chắc để rộng = 416dp cũng vẫn ổn
+Chú ý thuộc tính android:translationX="-280dp" của cả LinearLayout và RelativeLayout, nó dùng cho việc translate background

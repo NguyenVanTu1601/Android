@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_orang"
+    tools:context=".SpinnerActivity">
+
+    <ImageView
+        android:id="@+id/spin_stand"
+        android:layout_width="380dp"
+        android:layout_height="380dp"
+        android:src="@drawable/spin_stand"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.747" />
+
+    <ImageView
+        android:id="@+id/spin_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/spin_btn"
+        app:layout_constraintBottom_toBottomOf="@id/spin_stand"
+        app:layout_constraintEnd_toEndOf="@id/spin_stand"
+        app:layout_constraintStart_toStartOf="@id/spin_stand"
+        app:layout_constraintTop_toTopOf="@id/spin_stand"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="38dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="90dp"
+        app:layout_constraintEnd_toEndOf="@+id/spin_btn"
+        app:layout_constraintStart_toStartOf="@+id/spin_btn"
+        app:layout_constraintTop_toTopOf="@+id/spin_stand"
+        app:srcCompat="@drawable/spinpin"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:layout_width="391dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="84dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/spinitwinit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="627dp"
+        android:layout_height="207dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/coin_treasure"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.example.quizzgame.SpinWheel.LuckyWheelView
+        android:id="@+id/wheelView"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:contentDescription="@string/app_name"
+        app:lkwCenterImage="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/spin_stand"
+        app:layout_constraintEnd_toEndOf="@+id/spin_stand"
+        app:layout_constraintStart_toStartOf="@+id/spin_stand"
+        app:layout_constraintTop_toTopOf="@+id/spin_stand"
+        app:layout_constraintVertical_bias="0.18" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

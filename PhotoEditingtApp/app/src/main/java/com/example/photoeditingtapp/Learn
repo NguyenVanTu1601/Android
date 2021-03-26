@@ -1,0 +1,31 @@
+- Select Picture from Gallery/Camera
+- Gorgeous photo fillter with onetap auto enhance : Bộ lọc ảnh tuyệt đẹp với tính năng tự động cải tiến onetap
+- Adjust exposure, contrast, color temperature & saturation : Điều chỉnh độ phơi sáng, độ tương phản, nhiệt độ màu và độ bão hòa
+- Round corner : bo tròn góc
+- Photo crop with chosen aspect ratio : Cắt ảnh với tỷ lệ khung hình đã chọn
+- Photo frames : khung ảnh
+- Photo vignette & sharpness effects : Hiệu ứng làm mờ và sắc nét ảnh
+- Draw over image
+- Fun stickers & text over the photo
+- Export to Gallery : lưu vào bộ sư tập
+
+Document của api sử dụng : https://www.dsphotoeditor.com/android
+Sử dụng api :
++ Tải Android SDK từ trang chủ
++ Mở lên lấy file .aar
++ Chuyển android sang dạng Project -> app -> libs
++ Mở build.gradle thêm flatDir {     dirs 'libs' } vào repositories
++ Thêm tiếp : renderscriptTargetApi 21
+              renderscriptSupportModeEnabled true vào file build. gradle còn lại dưới minSDKVersion
++ Thêm tiếp vào dependance 1 đống thứ :))
++ Xin quyền Permission
++ Thêm code vào MainActivity
+
+Thêm quảng cáo vào app dùng admob
++ https://developers.google.com/admob/android/quick-start
++ implement baner : https://developers.google.com/admob/android/banner để thêm hiển thị
+Google cung cấp 2 loại quảng cáo là : một là chỉ gồm 1 khung chữ nhật, ng dùng vãn thao tác với app bình thường
+2 là che phủ toàn màn hình tới khi ng dùng đóng chúng
+ Quang cáo loại 1 nằm trong mainActivity, loại 2 trong resultActivity
+
+

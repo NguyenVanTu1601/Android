@@ -47,10 +47,12 @@ public class MainActivity extends AppCompatActivity {
         Message=findViewById(R.id.message);
         send=findViewById(R.id.btnSendNoti);
         apiService = Client.getClient("https://fcm.googleapis.com/").create(APIService.class);
+
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseDatabase.getInstance().getReference().child("Tokens").child(UserTB.getText().toString().trim()).child("token")
+                FirebaseDatabase.getInstance().getReference().child("Tokens")
+                        .child(UserTB.getText().toString().trim()).child("token")
                         .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

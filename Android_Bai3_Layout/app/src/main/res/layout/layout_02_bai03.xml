@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:stretchColumns="1"
+    android:layout_margin="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableRow>
+        <TextView
+            android:text="Login"
+            android:layout_span="2"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center"/>
+    </TableRow>
+    <TableRow>
+        <TextView android:text="Username" android:textStyle="bold" />
+        <EditText android:hint="enter id" />
+    </TableRow>
+    <TableRow>
+        <TextView android:text="Password"  android:textStyle="bold" />
+        <EditText android:inputType="textPassword"
+            android:hint="enter password"
+            />
+    </TableRow>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:text="OK"
+            android:backgroundTint="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@color/black"
+            android:text="Cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_marginStart="5dp"
+            android:text="Forgot password"
+            android:backgroundTint="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</TableLayout>

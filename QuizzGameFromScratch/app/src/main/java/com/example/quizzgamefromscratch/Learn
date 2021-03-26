@@ -1,0 +1,7 @@
+Mô tả sơ bộ : Đây là project game thể loại
+ + Cho câu hỏi và một loạt các chữ cái của câu trả lời.
+ + Chọn các chữ cái để xếp thành đáp án đúng
+
+Một số điểm quan trọng
+ + Xử lý add view bằng java code trong MainActivity.java
+ + Thêm animation bằng view.startAnimation() và view.animate()....

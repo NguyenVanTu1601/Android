@@ -1,0 +1,128 @@
+Phần 1 - Thư viện :
+Fonts: Ubuntu
+Source: https://fonts.google.com/specimen/Ubuntu​
+
+Libraries Used:
+1. Scalable Size Unit:
+        a) sdp: https://github.com/intuit/sdp​
+        b) ssp: https://github.com/intuit/ssp​
+2. Recycler View: https://developer.android.com/jetpack/androidx/releases/recyclerview
+3. Material Design: https://material.io/develop/android/docs/getting-started
+4. MultiDex: https://developer.android.com/studio/build/multidex​
+5. Retrofit: https://square.github.io/retrofit​
+6. Swipe Refresh Layout: https://developer.android.com/training/swipe/add-swipe-interface
+
+Để sử dụng FCM cần có
+1. Đăng kí service FCM
+2. Tạo service class MessagingService.java
+3. Tạo retrofit - package network để kết nối tới fcm.googleapis
+4. Tạo các thao tác gửi nhận trong incoming và outgoing
+
+Phần 2 : Thao tác
+1. Setup Form SignIn, SignUp
+2. Setup Firebase Cloud Messaging & Firestore
+- Firebase Cloud Messaging : Push pop notification messaging, ...
+    + Class : MesagingService là dạng Service đón nhận các thông báo có tin nhắn mới bla bla...
+    + Đăng ký : IntentFilter của service trong manifest (mục 4 của Firebase Cloud Messaging)
+                với name = name của class : " .firebase.MessagingService "
+- Firestore : Lưu trữ thông tin người dùng sau khi đăng kí
+3. Sign up using Firestore
+- Class : Constants (Hằng số)
+- Activity : SignUpActivity
+    + Sử dụng cờ của Intent.addFlag()
+4. SignIn with FireStore, SharedPreference
++ Class : PreferenceManager
++ Activity : SignInActivity
+5.Working With FCM Token & Sign Out
+- Sử dụng video meeting cần dùng tới token do đó sẽ lưu token vào database sau khi đã signin/ signup
+và xóa đi khi signout. Nếu token có thì tức là ng đó đã đăng nhập, nếu ko có thì tài khoản đó k đăng nhập và ko thể gọi
+    + Xem cách lấy token của FCM bằng OutgoingActivity hoặc MainActivity
+    + Token được thêm vào khi người dùng đăng nhập, và tiến vào MainActivity
+    + Trong outgoing lấy token của bản thân để gọi
+    + Trong MainActivity lấy token bản thân để lưu và lấy token người sẽ nhận cuộc gọi
+
+- Tìm hiểu về DocumentReference và FieldValue.delete() trong fun SignOut của MainActivity.java
+
+6. Display user list using Firebase FireStore Database
++ Xây dựng adapter : UserAdapter cho recyclerView của MainActivity
+
+7. Setup Retrofit (package Network)
+- APIClient : Dùng tạo kết nối Retrofit
+- ApiService : Là interface cho các method get/post
+- Sử dụng swipeRefeshing trong MainActivity.xml và MainActivity.class
+    + swipeRefreshLayout.setOnRefreshListener(this::getUsers)
+    + swipeRefreshLayout.setRefreshing(true/false)
+8. Incoming & Outgoing Invitation Screens Design (invitation : lời mời)
+Thiết kế giao diện nhận cuộc gọi video/audio
+- IncomingInvitationActivity : Giao diện bên nhận
+- OutgoingInvitationActivity : Giao diện bên gọi
+
+9.  Initiate Video Meeting(Send Meeting Invitation)
+- Send Remote Message using Firebase Cloud Messaging (FCM)
+ + URL : https://fcm.googleapis.com/fcm/send
+ + Headers :
+ (1) : Authorization : "kev = your_server_key" // lấy từ firebase project
+ (2) : Content-Type : "application/json"
+ + Body :
+ {
+    "data" : {
+        "type" : "invitation",
+        "meetingType" : "video",
+        "first_name" : "Tu",
+        "last_name" : "Nguyen",
+        "email" : "123@gmail.com"
+    },
+    "registration_ids" : ["receiver_token"] // token của bên nhận
+ }
+- Nhận token của Firebase : Xem OutgoingInvitationActivity
+- Cài đặt cloud messaging trên Firebase
++ Xem video https://www.youtube.com/watch?v=cQkuWMB_9SY&list=PLam6bY5NszYNR54PiY_NN7hGS858xinq-&index=9 tại 3p29
++ Hoặc làm theo các bước
+B1 : Mở Firebase -> project -> ProjectOverview -> Setting
+B2 : Chọn Cloud Messaging -> Coppy Serverkey -> thêm Headers, và 1 số thông tin như
+ REMOTE_MSG_DATA ... vào Constants.java
+B3 : Vào OutgoingInvitationActivity để tiến hành tạo remote invitation
+B4 : Vào MessagingService để tạo thao tác nhận dữ liệu khi có cuộc gọi và chuyển hướng tới IcomingInvitationActivity
+Đồng thời bên Outgoing của ng gửi gửi đi thông tin gì vào body thì bên nhận nhận các thông tin đó và cho vào intent
+
+Luồng hoạt động : Gửi lời mời từ Outgoing -> Service -> Incoming
+
+10. Accept, Reject & Cancel Meeting Invitation
+- Ở Incomming :
++ Người nhận nếu accept thì sẽ sinh ra 1 sendResponse với TYPE = RESPONSE và Type của Response này là Accept
++ Người nhận nếu reject thì sẽ sinh ra 1 sendResponse với TYPE = RESPONSE và Type của Response này là Reject
+- Ở outgoing :
++ Người gửi tin nhấn cancel sẽ sinh ra 1 cancelInvitation với TYPE = RESPONSE và type của response này là cancel
+- Ở phía MessageService:
++ Sau khi nhận type = RESPONSE thì kiểm tra type của Response này
+ (1) Nếu là accept/ reject tiến hành gửi tới outgoing phía người gửi để ng gưi biết rằng ng nhận accept/ reject kết nối
+ (2) Nếu là cancel thì tiến hành gửi tới incomming của ng nhận là ng gửi đã hủy kết nối
+ Để hoạt động tốt cho (1) và (2) thì sau khi xác nhận type là Response thì sẽ tạo ra 1 Local BoardCastService để chạy background thông báo
+- Phía Service sau khi nhận được type = RESPONSE sẽ sinh ra 1 LocalBoardcastManager có chứ năng gửi 1 intent thông điệp tới bên Outgoing / Incoming (cho phù hợp)
+ + Outgoing : Sinh ra 1 BoardcastReceiver để đón nhận intent mà LocalBorardcaseManager gửi tới để xác định xem ng nhận chấp nhận / từ chối call
+ + Incoming : Sinh ra 1 BoardcastReceiver để đón nhận intent xác định xem ng gửi yêu cầu call có nhấn hủy call hay ko
+Sử dụng LocalBroadcastManager và BroadcastReceiver
+
+11. The Video Meeting Using Jitsi Meet
+Khá là đơn giản, sử dụng nó ngắn gọn :))
++ Tạo 1 meetingRoom trong Outgoing và gửi intent trong service
++ import jitsi meet android sdk : https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-android-sdk
++ Khởi tạo jitsi trong incomming phần sendRemoteMessage để tạo video bên Incoming
++ Tạo jitsi trong Outcoming khi Outcoming lắng nghe được chấp nhận từ phía người gửi
+
+12.The Audio Meeting Using Jitsi Meet
++ Trong mainActivity xủ lý sự kiện click image Audio
++ fix lại bên jitsi của out/in như của video , setVideoMuted(true) khi dùng audio
+
+13. Video Meeting (Conference) With Multiple Users
+Call 1-n nhưng chưa thích nên k xem : https://www.youtube.com/watch?v=YF7cEz33HWc&list=PLam6bY5NszYNR54PiY_NN7hGS858xinq-&index=13
+Hoặc xem tại : F:\Android_App_MP4
+
+14.Disable Battery Optimizations : tắt tối ưu hóa pin
+Một vấn đề xảy ra tại đây : Ban đầu khi ứng dụng ko chạy, nó sẽ có 1 service chạy nền để lắng nghe. Khi có 1 cuộc gọi đến, màn hình incoming
+bên người nhận sẽ bật, nếu ta từ chối và chuyển app về background (vẫn bật app) thì vẫn nhận cuộc gọi như thường. Nhưng nếu lúc này ta tắt app
+thì sẽ ko còn nhận được cuộc gọi nữa do hệ thống ưu hóa pin và tắt service của ta đi
+Để khắc phục vấn đề này, ta làm như sau :
+- Vào MainActivity : thêm phần checkBatteryOptimization()
+- Phần thêm vào này sẽ được gọi trong onCreated() và trong onActivityResult();
+

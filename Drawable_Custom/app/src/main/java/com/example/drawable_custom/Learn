@@ -1,0 +1,88 @@
+1. Tạo ảnh shape
+Công thức đầy đủ của 1 shape :
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape=["rectangle" | "oval" | "line" | "ring"] >
+    <corners
+        android:radius="integer"
+        android:topLeftRadius="integer"
+        android:topRightRadius="integer"
+        android:bottomLeftRadius="integer"
+        android:bottomRightRadius="integer" />
+    <gradient
+        android:angle="integer"
+        android:centerX="float"
+        android:centerY="float"
+        android:centerColor="integer"
+        android:endColor="color"
+        android:gradientRadius="integer"
+        android:startColor="color"
+        android:type=["linear" | "radial" | "sweep"]
+        android:useLevel=["true" | "false"] />
+    <padding
+        android:left="integer"
+        android:top="integer"
+        android:right="integer"
+        android:bottom="integer" />
+    <size
+        android:width="integer"
+        android:height="integer" />
+    <solid
+        android:color="color" />
+    <stroke
+        android:width="integer"
+        android:color="color"
+        android:dashWidth="integer"
+        android:dashGap="integer" />
+</shape>
+
+
+Để bắt đầu vẽ một khối bằng Shape XML, bạn nhất định phải khai báo thẻ shape ở gốc.
+- Trong thẻ shape có thuộc tính android:shape dùng để chỉ định một trong các khối hình.
+    + Rectangle: là hình chữ nhật, hình khối này là mặc định, có nghĩa là nếu không khai báo khối hình của chúng ta sẽ có hình chữ nhật.
+    Oval: là hình oval.
+Line: là một đường thẳng với chiều dài dãn ra rộng hết không gian chứa nó, loại hình line này cần đến định nghĩa stroke kèm theo.
+Ring: sẽ vẽ một vành tròn như là một chiếc nhẫn, được giới hạn bởi hai đường tròn làm biên,
+nếu dùng kiểu ring này thì cần định nghĩa thêm vài thuộc tính nữa ở thẻ này.
+Đầu tiên là : android:innerRadius hoặc android:innerRadiusRatio giúp định nghĩa đường kính vòng tròn bên trong,
+một cái dùng độ lớn còn một cái dùng tỉ lệ để định nghĩa;
+android:thickness hoặc android:thicknessRatio giúp định nghĩa khoảng cách giữa hai đường tròn, một cái dùng độ lớn
+còn một cái dùng tỉ lệ để định nghĩa, android:useLevel cho biết ring này có dùng drawable dạng LevelListDrawable hay không.
+- Thẻ conners: dùng đẻ chỉ định độ bo tròn cho các góc của hình khối.
+- Thẻ gradient: thẻ này giúp chỉ định ba điểm màn làm mốc, thông qua các thuộc tính android:startColor,
+android:centerColor và android:endColor. Nó sẽ giúp vẽ ra dãy màu biến thiên dần theo ba màu mốc đó.
+Thẻ này còn kèm thêm các thuộc tính để xác định kiểu để loát màu như linear : đậm dần hoặc nhạt dần,
+radial: tạo ra các vòng tròn nhạt dần hoặc đậm dầm,
+sweep: là kiểu dẻ quạt.
+Thuộc tính android:angle giúp chỉ định góc xoay của dãy màu với type là linear.
+Hay android:gradientRadius giúp định nghĩa bán kính của hình tròn ra-đa.
+- Thẻ padding và size giúp chỉ định độ lớn của biên và độ lớn của hình khối.
+- Thẻ solid giúp tô màu cho hình khối (ngược lại với cách tô màu biến thiên gradient trên kia).
+Do tô có một màu nên nó chỉ cần một thuộc tính android:color để chỉ định màu.
+- Thẻ stroke chỉ định độ rộng cho đường biên của hình khối nhờ thuộc tính android:width.
+Và android:color của nó giúp chỉ định màu cho đường biên.
+Bạn còn có thẻ tạo đường biên với nét đứt nhờ android:dashGap và khoảng cách giữa các nét đứt android:dashWidth.
+
+2. Layer-list
+Cấu trúc 1 layer-list
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:drawable="@[package:]drawable/drawable_resource"
+        android:id="@[+][package:]id/resource_name"
+        android:top="dimension"
+        android:right="dimension"
+        android:bottom="dimension"
+        android:left="dimension" />
+</layer-list>
+
+Chúng ta cùng nhau tìm hiểu chi tiết các thẻ.
+Thẻ layer-list là thẻ gốc, nó hầu như không có tác dụng gì ngoài việc chứa các thẻ item bên trong nó.
+Mỗi thẻ item sẽ có vài thuộc tính kèm theo để định nghĩa bổ sung cho thẻ shape bên trong nó.
+android:drawable giúp chỉ định một resource drawable khác thay cho việc dùng thẻ shape.
+android:id giúp tạo id cho thẻ item.
+android:top, android:bottom, android:left, android:right giúp chỉ định các khoảng cách so với các biên của item đó.
+android:width, android:height, android:gravity lần lượt xác định chiều rộng, chiều cao và vị trí của item.
+
