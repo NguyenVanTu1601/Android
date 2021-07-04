@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.MokaCoffeeFragment"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/moka"
+        android:scaleType="center"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đây là một loại cà phê thuộc chi Arabica, được những người Pháp di thực từ những năm 30. Cà phê Moka có giá bán cao bởi tính chất khó trồng, tốn nhiều công sức chăm sóc, yêu cầu về môi trường lẫn trình độ kĩ thuật của người trồng cũng như cho ra năng suất thấp hơn so với cà phê Robusta. "
+        android:textColor="@color/black"
+        android:layout_marginStart="32dp"
+        android:lineSpacingExtra="2dp"
+        android:layout_marginEnd="32dp"/>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#C0C0C0"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/student_item_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Id : 1"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/student_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Name : Nguyễn Văn Tú"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/student_item_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:padding="5dp"
+            android:drawablePadding="5dp"
+            android:drawableEnd="@drawable/ic_male"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+        <TextView
+            android:padding="5dp"
+            android:id="@+id/student_item_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mark : 6.5"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

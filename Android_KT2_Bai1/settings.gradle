@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "Android_KT2_Bai1"

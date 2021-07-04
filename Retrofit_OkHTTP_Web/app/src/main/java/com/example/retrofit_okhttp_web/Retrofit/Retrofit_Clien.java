@@ -30,6 +30,7 @@ public class Retrofit_Clien {
                                          .client(builder) // các cài đặt muốn set ở trên
                                          .addConverterFactory(GsonConverterFactory.create(gson)) // chuyển biến của json về java
                                          .build();
+
         return retrofit;
     }
 }

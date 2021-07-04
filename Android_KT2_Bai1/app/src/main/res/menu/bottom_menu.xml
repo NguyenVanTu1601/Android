@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/culi"
+        android:title="Culi Coffee"></item>
+    <item android:id="@+id/moka"
+        android:title="Moka Coffee"></item>
+    <item android:id="@+id/robusta"
+        android:title="Robusta Coffee"></item>
+</menu>

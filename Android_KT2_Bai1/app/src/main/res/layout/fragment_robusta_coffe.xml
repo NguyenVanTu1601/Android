@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.RobustaCoffeFragment"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/robusta"
+        android:scaleType="center"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đây là một trong những loại cà phê phổ biến ở Việt Nam và trên toàn Thế giới, còn được gọi là cà phê Vối, có hạt hình elip tròn, được chế biến thông qua quá trình rang trực tiếp nhân cà phê, chứa hàm lượng caffeine cao từ 2,5% đến 3%, vị đắng đến đắng gắt."
+        android:textColor="@color/black"
+        android:layout_marginStart="32dp"
+        android:lineSpacingExtra="2dp"
+        android:layout_marginEnd="32dp"/>
+
+</LinearLayout>

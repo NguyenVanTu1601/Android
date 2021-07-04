@@ -11,6 +11,10 @@ import android.widget.Toast;
 import com.example.bottomsheetdialog_new.databinding.ActivityMainBinding;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
+/**
+ * Có thể thêm viewPager vào bottom sheet. kiểu fragment trong bottomsheet
+ * Tuy nhiên phần xử lý và thêm viewPager để trong onCreate và phần tạo background trong suốt thì nên để ở onCreateDialog
+ */
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
@@ -44,4 +48,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
 }

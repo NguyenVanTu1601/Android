@@ -149,7 +149,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     private void createPostField() {
         Call<Post> call = jsonPlaceHodelApi.createPost(23,"New Title", "New Body");
         call.enqueue(new Callback<Post>() {
@@ -169,7 +168,6 @@ public class MainActivity extends AppCompatActivity {
                 textViewResult.setText(content + "\n");
 
             }
-
             @Override
             public void onFailure(Call<Post> call, Throwable t) {
                 textViewResult.setText(t.getMessage());

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "524241243329",
+    "project_id": "loginwithfacebook-24dc2",
+    "storage_bucket": "loginwithfacebook-24dc2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524241243329:android:760818e24587e655921840",
+        "android_client_info": {
+          "package_name": "com.example.loginwithfacebook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524241243329-uv71htpb8u7tprco0tmantukftqr95c7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQ4-WHJJAcfRiEskJ7z1zHJ2M5en-bNdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524241243329-uv71htpb8u7tprco0tmantukftqr95c7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

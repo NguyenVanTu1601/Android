@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "972336541892",
+    "project_id": "service-oriented-software",
+    "storage_bucket": "service-oriented-software.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972336541892:android:932d699f58d0d0b14a5991",
+        "android_client_info": {
+          "package_name": "com.example.serviceorientedsoftware"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "972336541892-tmeidu06mfv7mgqj7ismhfelbdcgds9m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsAMBeR4NlPDG_zOsYqY5F1F5-ltP2_YA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "972336541892-tmeidu06mfv7mgqj7ismhfelbdcgds9m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

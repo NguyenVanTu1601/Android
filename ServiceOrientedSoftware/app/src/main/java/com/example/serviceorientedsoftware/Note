@@ -1,0 +1,6 @@
+Email Firebase : nkjmxukute5@gmail.com
+Chú ý hashcode gen ra ko dùng được, đợi login fault thì lấy hashcode nó bảo để add vào
+
+
+--------- 13/06/2021 fix lại về trạng thái thầy khánh
+Sửa cô v.a trong các file loginactivity, petactivity, register activity (các phần dataClient)

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/close"
+        android:title="Đóng"
+        android:icon="@drawable/ic_close"/>
+    <item android:id="@+id/infomation"
+        android:title="Thông tin cá nhân"
+        android:icon="@drawable/ic_info"/>
+</menu>

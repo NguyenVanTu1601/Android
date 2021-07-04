@@ -12,13 +12,13 @@ public class Database extends SQLiteOpenHelper {
         super(context, name, factory, version);
     }
 
-    // Tạo function truy vấn không trả về kết quả (CREATE, INSERT , DELETE, UPDATE...)
+    // Tạo function truy vấn không trả về kết quả (CREATE, INSERT , DELETE, UPDATE...) <=> executeQuery của SQL
     public void QueryData(String sql){
         SQLiteDatabase database = getWritableDatabase(); // tương tác với database
         database.execSQL(sql); // thực thi lệnh
     }
 
-    // Tạo function lấy kết quả dạng con trỏ (Cursor)
+    // Tạo function lấy kết quả dạng con trỏ (Cursor) <=> Select : trả về resultSet
     public Cursor getData(String sql){
         SQLiteDatabase database = getReadableDatabase(); // Đọc thông tin, nếu dùng getWrite có thê vừa đọc vừa ghi
         return database.rawQuery(sql,null);

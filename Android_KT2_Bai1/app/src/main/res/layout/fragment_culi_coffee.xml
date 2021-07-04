@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.CuliCoffeeFragment"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/culi"
+        android:scaleType="center"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cà phê Culi hay còn có tên khác là cà phê Bi hoặc Peaberry với hình dáng hạt tròn trịa như những hạt đậu, có chứa hàm lượng caffein cao cùng mùi thơm và hương vị đắng mạnh hơn so với các loại cà phê khác. Đây là một dạng hạt đột biến có trên cả Arabica và Robusta."
+        android:textColor="@color/black"
+        android:layout_marginStart="32dp"
+        android:lineSpacingExtra="2dp"
+        android:layout_marginEnd="32dp"/>
+</LinearLayout>

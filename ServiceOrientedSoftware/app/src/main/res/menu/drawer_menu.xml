@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/location_drawer"
+            android:title="Shop Location"
+            android:iconTint="@color/black"
+            android:icon="@drawable/ic_location"/>
+        <item
+            android:id="@+id/profile_drawer"
+            android:icon="@drawable/ic_profile"
+            android:title="Profile User" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/drawer_share"
+                android:icon="@drawable/ic_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/drawer_notification"
+                android:icon="@drawable/ic_notifications_off"
+                android:title="Notification" />
+            <item
+                android:id="@+id/logout_drawer"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+</menu>
