@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Anhxa();
+        Log.d("stateActivity", "Oncreate");
         btnXuly.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     private void Anhxa(){
         btnXuly = (Button) findViewById(R.id.button);
         txtThongTin = (TextView) findViewById(R.id.textView);
@@ -61,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onProgressUpdate(String... values) {
             super.onProgressUpdate(values);
             txtThongTin.setText(values[0]);
+            Log.i("hihi","1");
         }
 
         @Override
@@ -75,5 +79,34 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("stateActivity", "OnPause");
+    }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("stateActivity", "Onstop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("stateActivity", "OnDestroy");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("stateActivity", "Onstart");
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("stateActivity", "OnrESUM");
+    }
 }
